@@ -15,4 +15,7 @@
 
     <color name="color_box_background">#FFFFFF</color>
     <color name="color_hint_text">#C1C1C1</color>
+
+    <color name="color_red">#E91E63</color>
+    <color name="color_blue">#3F51B5</color>
 </resources>
