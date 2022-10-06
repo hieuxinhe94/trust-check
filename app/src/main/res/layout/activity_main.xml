@@ -6,13 +6,218 @@
     android:layout_height="match_parent"
     tools:context=".ui.views.home.HomeActivity">
 
+    <ImageView
+        android:id="@+id/setting_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+    <ImageView
+        android:id="@+id/report_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="24dp"
+        app:tint="#E91E63"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_icon"
+        app:layout_constraintEnd_toStartOf="@+id/setting_icon"
+        app:layout_constraintTop_toTopOf="@+id/setting_icon"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
+        android:text="Good Morning, Hieu"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/report_icon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Do you need to trust something?"
+        android:textColor="#303F9F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:autofillHints="0967356524;VietconBank;ABCABC"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:clipToOutline="true"
+        android:background="@drawable/searchview"
+        android:queryHint="Số điện thoại, Tin nhắn, Tên, Đường Link... .."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        />
+
+    <ImageView
+        android:id="@+id/attach_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:tooltipText="Attach file?"
+        app:layout_constraintEnd_toEndOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:text="Lừa đảo xuất hiện gần đây"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:text="Cảnh báo gần đây của bạn"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/horizontalScrollView"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/book1"
+                    android:layout_width="100pt"
+                    android:layout_height="225dp"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners"
+                    app:srcCompat="@drawable/cover_1_comp" />
+
+                <TextView
+                    android:layout_width="90pt"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="Ứng dụng chứng khoán lừa đảo"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/book2"
+                    android:layout_width="100pt"
+                    android:layout_height="225dp"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners"
+                    app:srcCompat="@drawable/cover_2_science" />
+
+                <TextView
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="Tin nhắn giả dang ngân hàng"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/ic_baseline_library_books_24"
+                app:tint="#6A08FB" />
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Số điện thoại lừa đảo"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="2022/10/10"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
