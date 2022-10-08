@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:background="@color/color_blue"
+    android:background="@color/color_background"
     android:clipToPadding="false">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -24,31 +24,58 @@
         android:layout_marginStart="12dp"
         android:foreground="?attr/selectableItemBackgroundBorderless"
         android:padding="4dp"
-        android:tint="@color/white"
+        app:tint="#49454F"
         app:layout_constraintHorizontal_bias="1"
         app:srcCompat="@drawable/ic_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:id="@+id/icon_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintVertical_bias="0"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="#49454F"
+        app:layout_constraintS="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
     <TextView
         android:id="@+id/title"
-        android:textSize="24sp"
-        app:layout_constraintVertical_bias="0.4"
-        android:layout_width="0dp"
-
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AAAA"
-        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Back"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_backward"
+        app:layout_constraintStart_toEndOf="@+id/icon_backward"
+       />
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btn_block"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/color_error"
+        android:text="Chặn số này"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
