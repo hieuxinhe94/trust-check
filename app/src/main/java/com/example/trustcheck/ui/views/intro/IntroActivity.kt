@@ -3,12 +3,10 @@ package com.example.trustcheck.ui.views.intro
 
 import android.Manifest
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.trustcheck.R
 import com.example.trustcheck.ui.views.home.HomeActivity
-import com.example.trustcheck.ui.views.report.ReportActivity
 import com.github.appintro.AppIntro
 import com.github.appintro.AppIntroCustomLayoutFragment
 import com.github.appintro.AppIntroFragment
@@ -30,35 +28,44 @@ class IntroActivity : AppIntro() {
                 backgroundColorRes = R.color.color_blue,
                 title = "Welcome to TrustCheck",
                 description = "Always beside of you, Always keep you save!",
-        ))
+            )
+        )
 
-        addSlide(AppIntroFragment.createInstance(
-            imageDrawable = R.drawable.undraw_calling,
-            title = "Trust Phone Number",
-            backgroundColorRes = R.color.color_blue,
-            description = "Telesales, Scam, Missed call for fee...\nSetting for blocks or ignore..."
-        ))
+        addSlide(
+            AppIntroFragment.createInstance(
+                imageDrawable = R.drawable.undraw_calling,
+                title = "Trust Phone Number",
+                backgroundColorRes = R.color.color_blue,
+                description = "Telesales, Scam, Missed call for fee...\nSetting for blocks or ignore..."
+            )
+        )
 
-        addSlide(AppIntroFragment.createInstance(
-            imageDrawable = R.drawable.undraw_ideas,
-            title = "Trust SMS",
-            backgroundColorRes = R.color.color_blue,
-            description = "Ads message, Scam, Fake Brand \nSetting to auto delete or block..."
-        ))
+        addSlide(
+            AppIntroFragment.createInstance(
+                imageDrawable = R.drawable.undraw_ideas,
+                title = "Trust SMS",
+                backgroundColorRes = R.color.color_blue,
+                description = "Ads message, Scam, Fake Brand \nSetting to auto delete or block..."
+            )
+        )
 
-        addSlide(AppIntroFragment.createInstance(
-            imageDrawable = R.drawable.undraw_the_search,
-            title = "Search",
-            backgroundColorRes = R.color.color_blue,
-            description = "Search any scammers name including name, phone number, text messages, website..."
-        ))
+        addSlide(
+            AppIntroFragment.createInstance(
+                imageDrawable = R.drawable.undraw_the_search,
+                title = "Search",
+                backgroundColorRes = R.color.color_blue,
+                description = "Search any scammers name including name, phone number, text messages, website..."
+            )
+        )
 
-        addSlide(AppIntroFragment.createInstance(
-            imageDrawable = R.drawable.undraw_environment,
-            title = "Report and help others",
-            backgroundColorRes = R.color.color_blue,
-            description = "Let's share your known and cases to prevent that problem happen again!"
-        ))
+        addSlide(
+            AppIntroFragment.createInstance(
+                imageDrawable = R.drawable.undraw_environment,
+                title = "Report and help others",
+                backgroundColorRes = R.color.color_blue,
+                description = "Let's share your known and cases to prevent that problem happen again!"
+            )
+        )
 
         //TODO: Change images
 
@@ -66,7 +73,7 @@ class IntroActivity : AppIntro() {
         isColorTransitionsEnabled = true
         isIndicatorEnabled = true
 
-        setTransformer(AppIntroPageTransformerType.Fade )
+        setTransformer(AppIntroPageTransformerType.Fade)
         showStatusBar(false)
         setDoneText(R.string.understand)
         setColorDoneText(R.color.color_secondary)
@@ -85,10 +92,14 @@ class IntroActivity : AppIntro() {
 
     private fun setupPermissionAsk() {
         // Request permission (must declare in the manifest before asking)
-        askForPermissions(arrayOf(Manifest.permission.CALL_PHONE),
-            2, false)
-        askForPermissions(arrayOf(Manifest.permission.READ_SMS),
-            3, false)
+        askForPermissions(
+            arrayOf(Manifest.permission.CALL_PHONE),
+            2, false
+        )
+        askForPermissions(
+            arrayOf(Manifest.permission.READ_SMS),
+            3, false
+        )
     }
 
     override fun onSkipPressed(currentFragment: Fragment?) {
@@ -113,6 +124,7 @@ class IntroActivity : AppIntro() {
         // User pressed "Deny" on the permission dialog
         println("User pressed \"Deny\" on the permission dialog: $permissionName");
     }
+
     override fun onUserDisabledPermission(permissionName: String) {
         // User pressed "Deny" + "Don't ask again" on the permission dialog
         println("User pressed \"Deny\" + \"Don't ask again\" on the permission dialog: $permissionName");

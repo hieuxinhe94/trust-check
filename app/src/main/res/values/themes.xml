@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TrustCheck" parent="Theme.TrustCheck.Base"/>
+    <style name="Theme.TrustCheck" parent="Theme.TrustCheck.Base" />
 
     <!-- No Toolbar theme -->
     <style name="Theme.TrustCheck.NoActionBar" parent="Theme.TrustCheck.Base">
@@ -41,6 +41,7 @@
     <style name="Theme.TrustCheck.Toolbar.DrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@color/color_on_background</item>
     </style>
+
     <style name="RoundedCorners" parent="">
         <item name="cornerSize">16dp</item>
         <item name="cornerRadius">16dp</item>
@@ -49,5 +50,10 @@
     <style name="LargeRoundedCorners" parent="">
         <item name="cornerSize">24dp</item>
         <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
     </style>
 </resources>
