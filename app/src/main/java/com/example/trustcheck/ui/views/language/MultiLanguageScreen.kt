@@ -12,11 +12,6 @@ class MultiLanguageScreen : AppCompatActivity(), View.OnClickListener {
     //    private  var en_language : TextView? = null
 //    private  var vi_language : TextView? =null
     var color_index: Int = 1
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_multi_language_screen)
-        initView()
-    }
 
     private fun initView() {
         edt_en.setOnClickListener(this)

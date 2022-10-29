@@ -1,12 +1,16 @@
 package com.example.trustcheck.ui.receiver;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.provider.BaseColumns;
 import android.provider.Telephony;
 import android.telephony.SmsMessage;
 
@@ -84,35 +88,8 @@ public class SMSReceiver extends BroadcastReceiver {
                 boolean inList = c.moveToNext();
                 Logger.i(this, "Longkaka", String.valueOf(inList));
 
-                if (inList) {
-                    blocked = true;
-                }
-
-                if (!blocked) {
-
-                    SmsObservable.NewMessageMarker marker = new SmsObservable.NewMessageMarker(address);
-
-                    // Save the message in the SMS inbox table.
-                    ContentValues map = new ContentValues();
-                    map.put(Telephony.Sms.ADDRESS, address);
-                    map.put(Telephony.Sms.BODY, body);
-
-                    context.getContentResolver().insert(Telephony.Sms.Inbox.CONTENT_URI, map);
-
-                    if (SmsObservable.Companion.getInstance().countObservers() == 0) {
-                        Logger.i(this, "Longkaka", "Create Noti");
-                        // Send user a notification.
-                        // TODO
-//                        Notification.create(context, address, body);
-                    } else {
-                        // The app is running. Pass the SMS message to observers.
-                        SmsObservable.Companion.getInstance().update(marker);
-                    }
-                } else {
-
-                    pendingResult.abortBroadcast();
-                }
             }
         }
+
     }
 }

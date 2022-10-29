@@ -10,6 +10,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
+import android.provider.Telephony
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -27,6 +28,7 @@ import com.example.trustcheck.data.models.RecentWarning
 import com.example.trustcheck.ui.adapter.WarningAdapter
 import com.example.trustcheck.ui.helper.DBHelper
 import com.example.trustcheck.ui.views.language.MultiLanguageScreen
+import com.example.trustcheck.ui.views.menu.MenuActivity
 import com.example.trustcheck.ui.views.report.ReportActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -70,7 +72,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun clickAction() {
         settingView?.setOnClickListener {
-            showDialog()
+
+            startActivity(Intent(this, MenuActivity::class.java))
         }
         editSearch?.setOnFocusChangeListener { _, hasFocus ->
             run {
@@ -160,12 +163,14 @@ class HomeActivity : AppCompatActivity() {
             dialog.dismiss()
         }
         shareLayout.setOnClickListener {
+            makeDefaultSMSAppButtonClick(it)
             dialog.dismiss()
         }
         update.setOnClickListener {
             dialog.dismiss()
         }
         chooseLanguage.setOnClickListener {
+            save()
             startActivity(Intent(this, MultiLanguageScreen::class.java))
             dialog.dismiss()
         }
@@ -223,6 +228,12 @@ class HomeActivity : AppCompatActivity() {
         val dbHelper = DBHelper(this)
         dbHelper.addPhoneData(phoneData)
         dbHelper.addMessageData(phoneData)
+    }
+
+    fun makeDefaultSMSAppButtonClick(v: View?) {
+        val intent = Intent(Telephony.Sms.Intents.ACTION_CHANGE_DEFAULT)
+        intent.putExtra(Telephony.Sms.Intents.EXTRA_PACKAGE_NAME, this.packageName)
+        startActivity(intent)
     }
 
 }

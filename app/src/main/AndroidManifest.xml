@@ -25,7 +25,6 @@
     <uses-permission android:name="android.permission.RECEIVE_MMS" />
     <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
 
-
     <application
         android:name=".TrustCheckApplication"
         android:allowBackup="true"
@@ -37,6 +36,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrustCheck.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.views.menu.MenuActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ui.views.custom.CustomActivity"
             android:exported="false" />
@@ -71,7 +77,20 @@
             android:exported="false" />
         <activity
             android:name=".ui.views.home.HomeActivity"
-            android:exported="false" />
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.views.intro.IntroActivity"
             android:exported="true"
@@ -84,8 +103,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
-        </receiver>
-        <!-- Receiver that listens for incoming SMS messages -->
+        </receiver> <!-- Receiver that listens for incoming SMS messages -->
         <receiver
             android:name=".ui.receiver.SMSReceiver"
             android:exported="true"
@@ -94,24 +112,25 @@
                 <action android:name="android.provider.Telephony.SMS_DELIVER" />
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
-        </receiver>
-
-        <!-- Receiver that listens for incoming MMS messages -->
+        </receiver> <!-- Receiver that listens for incoming MMS messages -->
         <receiver
             android:name=".ui.receiver.MMSReceiver"
             android:exported="true"
             android:permission="android.permission.BROADCAST_WAP_PUSH">
             <intent-filter>
                 <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+
                 <data android:mimeType="application/vnd.wap.mms-message" />
             </intent-filter>
         </receiver>
+
         <service
             android:name=".services.HeadlessSMSSendService"
-            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
             <intent-filter>
                 <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:scheme="sms" />
@@ -120,8 +139,10 @@
                 <data android:scheme="mmsto" />
             </intent-filter>
         </service>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
+
 </manifest>

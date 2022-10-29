@@ -7,6 +7,7 @@ import android.net.Uri
 import android.telephony.SmsManager
 import android.telephony.TelephonyManager
 import android.text.TextUtils
+import com.example.trustcheck.ui.utils.Logger
 
 class HeadlessSMSSendService : IntentService(HeadlessSMSSendService::class.java.name) {
     init {
@@ -33,5 +34,8 @@ class HeadlessSMSSendService : IntentService(HeadlessSMSSendService::class.java.
             values.put("body", message)
             contentResolver.insert(smsSentUri, values)
         }
+
+        Logger.i(this, "Longkaka", "onHandleIntent")
+
     }
 }
