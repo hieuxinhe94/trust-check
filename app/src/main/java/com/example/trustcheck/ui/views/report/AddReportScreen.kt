@@ -1,6 +1,7 @@
 package com.example.trustcheck.ui.views.report
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,23 +9,32 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.trustcheck.R
 import com.example.trustcheck.data.models.RecentWarning
 import com.example.trustcheck.ui.adapter.WarningAdapter
-import com.yabu.livechart.model.DataPoint
-import com.yabu.livechart.model.Dataset
-import com.yabu.livechart.view.LiveChart
+import kotlinx.android.synthetic.main.activity_add_report_screen.*
 
-class ReportActivity : AppCompatActivity() {
+class AddReportScreen : AppCompatActivity(), View.OnClickListener {
+
     private var recyclerView: RecyclerView? = null
     private var warningAdapter: WarningAdapter? = null
-    private var liveChart: LiveChart? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_report)
-        recyclerView = findViewById(R.id.recycler_view)
-        liveChart = findViewById(R.id.live_chart)
-
+        setContentView(R.layout.activity_add_report_screen)
+        initView()
         displayWarning()
-        init()
+    }
+
+    private fun initView() {
+        recyclerView = findViewById(R.id.recycler_view)
+        topAppBar.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.topAppBar -> {
+                onBackPressed()
+
+            }
+        }
     }
 
     private fun displayWarning() {
@@ -49,16 +59,5 @@ class ReportActivity : AppCompatActivity() {
             )
         )
         recyclerView?.adapter = warningAdapter
-    }
-
-    private fun init(){
-        val dataset = Dataset(mutableListOf(
-            DataPoint(0f, 1f),
-            DataPoint(1f, 3f),
-            DataPoint(2f, 6f)))
-        liveChart?.setDataset(dataset)?.drawYBounds()
-            ?.drawBaseline()
-            ?.drawFill()
-            ?.drawDataset()
     }
 }

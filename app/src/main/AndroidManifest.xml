@@ -37,6 +37,20 @@
         android:theme="@style/Theme.TrustCheck.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".ui.views.report.AddReportScreen"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.news.NewsScreen"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.views.menu.MenuActivity"
             android:exported="false">
             <meta-data

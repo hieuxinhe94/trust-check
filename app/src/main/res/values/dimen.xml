@@ -8,9 +8,10 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
     <dimen name="margin_24dp">24dp</dimen>
-    <dimen name="dp_50">5dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
     <dimen name="dp_30">30dp</dimen>
     <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
 
     <dimen name="text_16sp">16sp</dimen>
     <dimen name="text_25sp">25sp</dimen>
