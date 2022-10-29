@@ -41,6 +41,4 @@
 
     <color name="background_search">#fc8019</color>
     <color name="main_color">#EF8354</color>
-    <color name="color_bg_search">#E1E4F1</color>
-    <color name="color_bg">#E5E8FE</color>
 </resources>

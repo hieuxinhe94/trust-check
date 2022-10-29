@@ -93,16 +93,12 @@
     <string name="warning_scam">Cảnh báo lừa đảo</string>
     <string name="very_big">rất lớn</string>
     <string name="menu">Menu</string>
+    <string name="report_new">Báo cáo trường hợp mới</string>
     <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
     <string name="update_package">Nâng cấp gói</string>
     <string name="donate">Ủng hộ, góp ý kiến</string>
-    <string name="result_for_find">Kết quả tìm kiếm</string>
+    <string name="result_for_find">Kế quả tìm kiếm</string>
     <string name="report_scam">Cảnh báo lừa đảo</string>
     <string name="report">Cảnh báo</string>
-    <string name="report_new">Báo cáo TH mới</string>
-    <string name="news">Tin tức</string>
-    <string name="received_news">Nhận báo cáo nội dung mới</string>
-    <string name="call_invite">Cuộc gọi quảng cáo, mời chào</string>
-    <string name="message_ads">Tin nhắn quảng cáo</string>
-    <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
+
 </resources>

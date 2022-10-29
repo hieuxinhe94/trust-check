@@ -6,7 +6,6 @@
     <style name="Theme.TrustCheck.NoActionBar" parent="Theme.TrustCheck.Base">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
     </style>
 
     <!-- Default Theme -->

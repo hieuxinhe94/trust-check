@@ -11,9 +11,6 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.provider.Telephony
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Patterns
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -85,29 +82,6 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         }
-        editSearch?.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                if(editSearch!!.text.isNotEmpty() || isValidPhoneNumber(editSearch!!.text.toString())){
-                    var intent = Intent(applicationContext, ReportActivity::class.java)
-                    startActivity(intent)
-                }
-            }
-
-        })
-    }
-
-    private fun isValidPhoneNumber(phone: String): Boolean {
-        return if (phone.trim { it <= ' ' } != "" && phone.length > 10) {
-            Patterns.PHONE.matcher(phone).matches()
-        } else false
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
