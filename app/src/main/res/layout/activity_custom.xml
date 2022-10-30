@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_bg"
     tools:context=".ui.views.custom.CustomActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,9 +20,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_bg"
             app:itemTextColor="@color/main_color"
             app:menu="@menu/language_menu"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
@@ -30,193 +31,260 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/language"
+                android:text="@string/custom"
                 android:textAppearance="?attr/textAppearanceHeadline6" />
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/txt_receive_new_infor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/choose_language"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbar" />
-
-    <TableLayout
-        android:id="@+id/tab_receive_ad"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        app:layout_constraintTop_toBottomOf="@+id/txt_receive_new_infor"> <!-- stretch the second column of the layout-->
-
-        <!-- first row of the table layout-->
-        <TableRow
-
-            android:id="@+id/firstRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <!-- first element of the row-->
-            <TextView
-                android:id="@+id/text_yes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#b0b0b0"
-                android:padding="18dip"
-                android:text="Text 1"
-                android:textColor="#000"
-                android:textSize="12dp" />
-
-            <TextView
-
-                android:id="@+id/txt_no"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF0000"
-                android:padding="18dip"
-                android:text="Text 2"
-                android:textColor="#000"
-                android:textSize="14dp" />
-
-        </TableRow>
-    </TableLayout>
-
-    <TextView
-        android:id="@+id/txt_call_ad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/choose_language"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_receive_ad" />
+        app:layout_constraintTop_toBottomOf="@id/appbar">
 
-    <TableLayout
-        android:id="@+id/tab_call_ad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        app:layout_constraintTop_toBottomOf="@+id/txt_call_ad"> <!-- stretch the second column of the layout-->
+        <TextView
+            android:id="@+id/txt_receive_new_infor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/received_news"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <!-- first row of the table layout-->
-        <TableRow
-
+        <TableLayout
+            android:id="@+id/tab_receive_ad"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/txt_receive_new_infor"> <!-- stretch the second column of the layout-->
 
-            <!-- first element of the row-->
-            <TextView
-                android:id="@+id/txt_off_alarm"
+            <TableRow
+
+                android:id="@+id/firstRow"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#b0b0b0"
-                android:padding="18dip"
-                android:text="Text 1"
-                android:textColor="#000"
-                android:textSize="12dp" />
+                android:layout_height="wrap_content">
 
-            <TextView
+                <!-- first element of the row-->
+                <TextView
+                    android:id="@+id/text_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+                    android:padding="18dip"
+                    android:text="Có"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
 
-                android:id="@+id/txt_reject"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF0000"
-                android:padding="18dip"
-                android:text="Text 2"
-                android:textColor="#000"
-                android:textSize="14dp" />
+                <TextView
 
-            <TextView
+                    android:id="@+id/txt_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_main_color"
+                    android:padding="18dip"
+                    android:text="Không"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
 
-                android:id="@+id/txt_block"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF0000"
-                android:padding="18dip"
-                android:text="Text 2"
-                android:textColor="#000"
-                android:textSize="14dp" />
+            </TableRow>
+        </TableLayout>
 
-        </TableRow>
-    </TableLayout>
+        <TextView
+            android:id="@+id/txt_call_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/call_invite"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_receive_ad" />
 
-
-    <TextView
-        android:id="@+id/txt_sms_ad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/choose_language"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_call_ad" />
-
-    <TableLayout
-        android:id="@+id/tab_sms_ad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="*"
-        app:layout_constraintTop_toBottomOf="@+id/txt_sms_ad"> <!-- stretch the second column of the layout-->
-
-        <!-- first row of the table layout-->
-        <TableRow
-
+        <TableLayout
+            android:id="@+id/tab_call_ad"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/txt_call_ad"> <!-- stretch the second column of the layout-->
 
-            <!-- first element of the row-->
+            <!-- first row of the table layout-->
+            <TableRow
 
-            <TextView
-                android:id="@+id/txt_off_alarm_sms"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#b0b0b0"
-                android:padding="18dip"
-                android:text="Text 1"
-                android:textColor="#000"
-                android:textSize="12dp" />
+                android:layout_height="wrap_content">
 
-            <TextView
+                <!-- first element of the row-->
+                <TextView
+                    android:id="@+id/txt_off_alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+                    android:padding="18dip"
+                    android:text="Tắt chuông"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
 
-                android:id="@+id/txt_auto_delete"
+                <TextView
+
+                    android:id="@+id/txt_reject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+                    android:padding="18dip"
+                    android:text="Từ chối"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+                <TextView
+
+                    android:id="@+id/txt_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_main_color"
+                    android:padding="18dip"
+                    android:text="Chặn"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_sms_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/message_ads"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_call_ad" />
+
+        <TableLayout
+            android:id="@+id/tab_sms_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/txt_sms_ad"> <!-- stretch the second column of the layout-->
+
+            <!-- first row of the table layout-->
+            <TableRow
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF0000"
-                android:padding="18dip"
-                android:text="Text 2"
-                android:textColor="#000"
-                android:textSize="14dp" />
+                android:layout_height="wrap_content">
+
+                <!-- first element of the row-->
+
+                <TextView
+                    android:id="@+id/txt_off_alarm_sms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+                    android:padding="18dip"
+                    android:text="Tắt chuông"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+
+                    android:id="@+id/txt_auto_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_main_color"
+
+                    android:padding="18dip"
+                    android:text="Tự động xoá"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="14dp" />
 
 
-        </TableRow>
-    </TableLayout>
+            </TableRow>
+        </TableLayout>
 
-    <TextView
-        android:id="@+id/txt_info_charge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:drawableStart="@drawable/ic_warning"
-        android:drawablePadding="10dp"
-        android:padding="@dimen/margin_16"
-        android:text="@string/choose_language"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tab_sms_ad" />
+        <TextView
+            android:id="@+id/txt_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/message_ads"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_sms_ad" />
+
+        <TableLayout
+            android:id="@+id/tab_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:stretchColumns="*"
+            app:layout_constraintTop_toBottomOf="@+id/txt_warning"> <!-- stretch the second column of the layout-->
+
+            <!-- first row of the table layout-->
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- first element of the row-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
+
+                    android:padding="18dip"
+                    android:text="Có"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_main_color"
+                    android:padding="18dip"
+                    android:text="Không"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+
+                    android:textSize="14dp" />
+
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_info_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:drawableStart="@drawable/ic_warning"
+            android:drawablePadding="10dp"
+            android:padding="@dimen/margin_16"
+            android:text="@string/upgrade"
+            android:textColor="@color/main_color"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_warning" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

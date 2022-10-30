@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_bg"
     tools:context=".ui.views.language.MultiLanguageScreen">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -12,17 +13,18 @@
         android:layout_height="wrap_content"
         android:focusable="false"
         app:expanded="false"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:id="@+id/top_bar_language"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:menu="@menu/language_menu"
+            android:background="@color/color_bg"
             app:itemTextColor="@color/main_color"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
 
@@ -43,7 +45,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/choose_language"
-        android:textColor="@color/black"
+        android:textColor="@color/text_color"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,12 +57,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin_16"
         android:gravity="center_vertical"
         android:padding="@dimen/padding_5"
         android:text="@string/en_language"
-        android:textColor="@color/black"
+        android:background="@drawable/border_white"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="@color/text_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_title" />
 
@@ -71,13 +74,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/margin_16"
-        android:background="@color/main_color"
+        android:background="@drawable/border_main_color"
         android:gravity="center_vertical"
         android:padding="@dimen/padding_5"
         android:text="@string/vi_language"
-        android:textColor="@color/black"
+        android:textColor="@color/text_color"
         android:textSize="20sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_en" />
 
