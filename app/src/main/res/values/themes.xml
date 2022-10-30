@@ -6,10 +6,6 @@
     <style name="Theme.TrustCheck.NoActionBar" parent="Theme.TrustCheck.Base">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="actionMenuTextColor">@color/main_color</item>
-        <item name="android:actionMenuTextColor">@color/main_color</item>
-
-
     </style>
 
     <!-- Default Theme -->
@@ -30,8 +26,7 @@
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
         <!-- Customize your theme here. -->
         <item name="drawerArrowStyle">@style/Theme.TrustCheck.Toolbar.DrawerArrowToggle</item>
-        <item name="actionMenuTextColor">@color/main_color</item>
-        <item name="android:actionMenuTextColor">@color/main_color</item>
+
     </style>
 
     <!-- Toolbar -->
@@ -41,8 +36,6 @@
         <item name="colorControlNormal">@color/color_on_background</item>
         <item name="colorButtonNormal">@color/color_on_background</item>
         <item name="android:background">@color/color_background</item>
-        <item name="actionMenuTextColor">@color/main_color</item>
-        <item name="android:actionMenuTextColor">@color/main_color</item>
     </style>
 
     <style name="Theme.TrustCheck.Toolbar.DrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
@@ -63,5 +56,4 @@
         <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
     </style>
-
 </resources>

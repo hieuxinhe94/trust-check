@@ -16,7 +16,6 @@ class MultiLanguageScreen : AppCompatActivity(), View.OnClickListener {
     private fun initView() {
         edt_en.setOnClickListener(this)
         edt_vi.setOnClickListener(this)
-        top_bar_language.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -32,9 +31,6 @@ class MultiLanguageScreen : AppCompatActivity(), View.OnClickListener {
                 edt_en.setBackgroundColor(getColor(R.color.white))
                 color_index = 2
                 LocaleHelper.setLocale(this, "vi")
-            }
-            R.id.top_bar_language -> {
-               onBackPressed()
             }
 
         }
