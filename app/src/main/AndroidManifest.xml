@@ -91,11 +91,6 @@
                 <data android:scheme="mmsto" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.views.intro.IntroActivity"
-            android:exported="true"
-            android:label="TrustCheck" />
-
         <receiver
             android:name=".ui.receiver.CallReceiver"
             android:enabled="true"

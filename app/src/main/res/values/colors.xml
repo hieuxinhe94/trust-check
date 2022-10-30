@@ -29,8 +29,8 @@
     <color name="textSecondary">#515151</color>
 
     <!-- colors for onboarding two-->
-    <color name="activeIndicators">#6871d0</color>
-    <color name="inactiveIndicator">#84d4dd</color>
+    <color name="activeIndicators">#39136d</color>
+    <color name="inactiveIndicator">#8B88DC</color>
 
     <color name="blackNavy">#10101C</color>
     <color name="next_1">#8B88DC</color>
@@ -43,4 +43,8 @@
     <color name="main_color">#EF8354</color>
 
     <color name="color_background_1">#39136d</color>
+    <color name="color_background_2">#E5E8FE</color>
+    <color name="color_transparent">#00FFFFFF</color>
+    <color name="color_text_purple_1">#39136d</color>
+    <color name="color_text_orange_1">#fc8019</color>
 </resources>
