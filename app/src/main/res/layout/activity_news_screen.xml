@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    tools:context=".ui.news.NewsScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        app:expanded="false"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/top_bar_news"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_bg"
+            app:itemTextColor="@color/main_color"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_100"
+                android:gravity="center"
+                android:text="@string/news"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <TextView
+            android:id="@+id/id_donate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Lừa đảo giả danh công an"
+            android:textColor="@color/textSecondary"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:lineSpacingExtra="@dimen/margin_8dp"
+            android:text="The lorem ipsum is a placeholder text used in publishing and graphic design. This filler text is a short paragraph that contains all the letters of the alphabet. The characters are spread out evenly so that the reader’s attention is focused on the layout of the text instead of its content." />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view">
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="start"
+            android:padding="@dimen/dp_3dp"
+            android:text="Hoạt động gần đây"
+            android:textColor="@color/textSecondary"
+            android:textSize="16sp" />
+
+<!--        <com.yabu.livechart.view.LiveChart-->
+<!--            android:id="@+id/live_chart"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_marginTop="@dimen/margin_8dp"-->
+<!--            app:baselineColor="@color/color_bg"-->
+<!--            app:baselineDashGap="8dp"-->
+<!--            app:baselineStrokeWidth="4dp"-->
+<!--            app:labelTextColor="@color/main_color"-->
+<!--            app:labelTextHeight="14sp"-->
+<!--            app:overlayCircleColor="@color/color_bg_search"-->
+<!--            app:overlayCircleDiameter="8dp"-->
+<!--            app:overlayLineColor="@color/color_error"-->
+<!--            app:pathColor="@color/color_primary"-->
+<!--            app:pathStrokeWidth="4dp"-->
+<!--            tools:ignore="MissingClass" />-->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -102,4 +102,6 @@
     <string name="report_scam">Cảnh báo lừa đảo</string>
     <string name="report">Cảnh báo</string>
 
+    <string name="report_new_item">Báo cáo</string>
+
 </resources>

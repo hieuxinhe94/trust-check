@@ -6,7 +6,7 @@
     >
     <item
         android:id="@+id/id_complete"
-        android:title="@string/report"
+        android:title="@string/report_new_item"
         app:iconTint="@color/main_color"
         app:itemTextColor="@color/main_color"
         app:showAsAction="always" />
