@@ -10,32 +10,32 @@
     android:padding="20dp">
 
     <ImageView
+        android:id="@+id/imageOnboarding"
         android:layout_width="260dp"
         android:layout_height="260dp"
-        android:id="@+id/imageOnboarding"
-        android:adjustViewBounds="true"
         android:layout_margin="15dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/app_name" />
 
     <TextView
+        android:id="@+id/textTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textTitle"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textAllCaps="true"
         android:fontFamily="@font/product_sans_bold"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/text_color"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/textDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textDescription"
-        android:gravity="center"
-        android:fontFamily="@font/product_sans_regular"
         android:layout_marginTop="10dp"
-        android:textColor="@color/textSecondary"
+        android:fontFamily="@font/product_sans_regular"
+        android:gravity="center"
+        android:textColor="@color/text_color"
         android:textSize="17sp" />
 
 </LinearLayout>

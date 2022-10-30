@@ -10,6 +10,7 @@ import com.example.trustcheck.R
 import com.example.trustcheck.data.models.RecentWarning
 import com.example.trustcheck.ui.adapter.WarningAdapter
 import kotlinx.android.synthetic.main.activity_add_report_screen.*
+import kotlinx.android.synthetic.main.activity_news_screen.*
 
 class AddReportScreen : AppCompatActivity(), View.OnClickListener {
 
@@ -25,7 +26,7 @@ class AddReportScreen : AppCompatActivity(), View.OnClickListener {
 
     private fun initView() {
         recyclerView = findViewById(R.id.recycler_view)
-        topAppBar.setOnClickListener(this)
+        top_bar_news.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {

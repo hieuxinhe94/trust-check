@@ -18,8 +18,7 @@
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:id="@+id/top_back_screen"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:itemTextColor="@color/main_color"
@@ -112,7 +111,7 @@
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:text="25%"
-                        android:textColor="@color/activeIndicators"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
 
@@ -124,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Quảng cáo"
-                    android:textColor="@color/activeIndicators"
+                    android:textColor="@color/text_shadow"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -155,7 +154,7 @@
                         android:layout_height="150dp"
                         android:gravity="center"
                         android:text="25%"
-                        android:textColor="@color/activeIndicators"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                 </RelativeLayout>
@@ -165,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Tự động"
-                    android:textColor="@color/activeIndicators"
+                    android:textColor="@color/text_shadow"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -179,7 +178,7 @@
             android:drawableStart="@drawable/ic_idea"
             android:padding="@dimen/dp_3dp"
             android:text="Kết quả không chính xác"
-            android:textColor="@color/textSecondary"
+            android:textColor="@color/text_color"
             android:textSize="14sp" />
 
         <TextView
@@ -189,7 +188,7 @@
             android:gravity="end"
             android:padding="@dimen/dp_3dp"
             android:text="Hoạt động gần đây"
-            android:textColor="@color/textSecondary"
+            android:textColor="@color/text_color"
             android:textSize="14sp" />
 
         <com.yabu.livechart.view.LiveChart
@@ -213,7 +212,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:text="Phản ánh gần đây"
-            android:textColor="@color/textSecondary"
+            android:textColor="@color/text_color"
             android:textSize="14sp" />
 
         <View

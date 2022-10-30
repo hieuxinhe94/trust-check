@@ -20,7 +20,6 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/color_bg"
@@ -75,7 +74,7 @@
                     android:id="@+id/text_yes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#b0b0b0"
+                    android:background="@drawable/border_white"
                     android:padding="18dip"
                     android:text="Có"
                     android:textAlignment="center"
@@ -87,7 +86,7 @@
                     android:id="@+id/txt_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/main_color"
+                    android:background="@drawable/border_main_color"
                     android:padding="18dip"
                     android:text="Không"
                     android:textAlignment="center"
@@ -128,7 +127,7 @@
                     android:id="@+id/txt_off_alarm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#b0b0b0"
+                    android:background="@drawable/border_white"
                     android:padding="18dip"
                     android:text="Tắt chuông"
                     android:textAlignment="center"
@@ -140,6 +139,7 @@
                     android:id="@+id/txt_reject"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/border_white"
                     android:padding="18dip"
                     android:text="Từ chối"
                     android:textAlignment="center"
@@ -151,7 +151,7 @@
                     android:id="@+id/txt_block"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/main_color"
+                    android:background="@drawable/border_main_color"
                     android:padding="18dip"
                     android:text="Chặn"
                     android:textAlignment="center"
@@ -194,7 +194,7 @@
                     android:id="@+id/txt_off_alarm_sms"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#b0b0b0"
+                    android:background="@drawable/border_white"
                     android:padding="18dip"
                     android:text="Tắt chuông"
                     android:textAlignment="center"
@@ -206,7 +206,8 @@
                     android:id="@+id/txt_auto_delete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/main_color"
+                    android:background="@drawable/border_main_color"
+
                     android:padding="18dip"
                     android:text="Tự động xoá"
                     android:textAlignment="center"
@@ -248,7 +249,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#b0b0b0"
+                    android:background="@drawable/border_white"
+
                     android:padding="18dip"
                     android:text="Có"
                     android:textAlignment="center"
@@ -259,11 +261,12 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/main_color"
+                    android:background="@drawable/border_main_color"
                     android:padding="18dip"
                     android:text="Không"
                     android:textAlignment="center"
                     android:textColor="#000"
+
                     android:textSize="14dp" />
 
 
@@ -274,15 +277,13 @@
             android:id="@+id/txt_info_charge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_24dp"
             android:drawableStart="@drawable/ic_warning"
             android:drawablePadding="10dp"
             android:padding="@dimen/margin_16"
             android:text="@string/upgrade"
-            android:textColor="@color/black"
+            android:textColor="@color/main_color"
             android:textSize="20sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tab_warning" />
     </LinearLayout>

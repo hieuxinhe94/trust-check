@@ -20,8 +20,7 @@
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:id="@+id/top_bar_news"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/color_bg"
@@ -91,7 +90,7 @@
             android:padding="@dimen/dp_3dp"
             android:text="Hoạt động gần đây"
             android:textColor="@color/textSecondary"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <com.yabu.livechart.view.LiveChart
             android:id="@+id/live_chart"

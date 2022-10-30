@@ -18,8 +18,7 @@
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:id="@+id/top_bar_menu"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:itemTextColor="@color/main_color"
@@ -51,8 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/report_new"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
 
         <View
             android:layout_width="match_parent"
@@ -66,8 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/custom_app"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
 
         <View
             android:layout_width="match_parent"
@@ -81,8 +80,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/update_package"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
 
         <View
             android:layout_width="match_parent"
@@ -96,8 +95,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/language"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
 
         <View
             android:layout_width="match_parent"
@@ -112,8 +111,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/donate"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
