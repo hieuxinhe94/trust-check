@@ -3,6 +3,7 @@ package com.example.trustcheck.ui.views.intro
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -21,17 +22,22 @@ class IntroduceActivity : AppCompatActivity() {
     private var onBoardingAdapter: OnBoardingAdapter? = null
     private var layoutOnBoardingIndicator: LinearLayout? = null
     private var buttonOnBoardingAction: MaterialButton? = null
+    private var buttonIgnoreAction: MaterialButton? = null
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduce)
 
-        layoutOnBoardingIndicator = findViewById(R.id.layoutOnboardingIndicators)
+        layoutOnBoardingIndicator = findViewById(R.id.layoutOnBoardingIndicators)
         buttonOnBoardingAction = findViewById(R.id.buttonOnBoardingAction)
+        buttonIgnoreAction = findViewById(R.id.buttonOnBoardingIgnore)
+
+
 
         setOnboardingItem()
 
-        val onBoardingViewPager = findViewById<ViewPager2>(R.id.onboardingViewPager)
+        val onBoardingViewPager = findViewById<ViewPager2>(R.id.onBoardingViewPager)
         onBoardingViewPager.adapter = onBoardingAdapter
 
         setOnBoardingIndicator()
@@ -54,6 +60,14 @@ class IntroduceActivity : AppCompatActivity() {
                 startActivity(i)
                 finish()
             }
+        }
+
+        buttonIgnoreAction?.setOnClickListener {
+            Common().setFistInstall()
+            val i = Intent(applicationContext, HomeActivity::class.java)
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(i)
+            finish()
         }
 
     }
@@ -100,8 +114,10 @@ class IntroduceActivity : AppCompatActivity() {
         }
         if (index == (onBoardingAdapter?.itemCount ?: 1) - 1) {
             buttonOnBoardingAction?.text = getString(R.string.get_started)
+            buttonIgnoreAction?.visibility = View.INVISIBLE;
         } else {
             buttonOnBoardingAction?.text = getString(R.string.next)
+            buttonIgnoreAction?.visibility = View.VISIBLE;
         }
     }
 
@@ -110,19 +126,19 @@ class IntroduceActivity : AppCompatActivity() {
         val itemFastFood = OnBoardingItem()
         itemFastFood.title = applicationContext.getString(R.string.block_call)
         itemFastFood.description = ""
-        itemFastFood.image = R.drawable.choose_your_meal
+        itemFastFood.image = R.drawable.intro_1
         val itemPayOnline = OnBoardingItem()
         itemPayOnline.title = applicationContext.getString(R.string.block_message)
         itemPayOnline.description = ""
-        itemPayOnline.image = R.drawable.choose_your_payment
+        itemPayOnline.image = R.drawable.intro_2
         val itemEatTogether = OnBoardingItem()
         itemEatTogether.title = applicationContext.getString(R.string.warning_new_prototype)
         itemEatTogether.description = ""
-        itemEatTogether.image = R.drawable.fast_delivery
+        itemEatTogether.image = R.drawable.intro_3
         val itemDayAndNight = OnBoardingItem()
         itemDayAndNight.title = applicationContext.getString(R.string.commitment)
         itemDayAndNight.description = ""
-        itemDayAndNight.image = R.drawable.day_and_night
+        itemDayAndNight.image = R.drawable.intro_4
         onBoardingItems.add(itemFastFood)
         onBoardingItems.add(itemPayOnline)
         onBoardingItems.add(itemEatTogether)

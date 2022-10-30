@@ -75,8 +75,8 @@
     <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
     <string name="ignore">Bỏ qua</string>
     <string name="got_it">Đã hiểu</string>
-    <string name="get_started">Bắt đầu</string>
-    <string name="next">Tiếp</string>
+    <string name="get_started">Hoàn thành</string>
+    <string name="next">Tiếp theo</string>
     <string name="phone_message">Số điện thoại, tin nhắn</string>
     <string name="find_image">Tìm ảnh</string>
     <string name="suggest">Gợi ý</string>
@@ -93,19 +93,19 @@
     <string name="choose_language">Chọn ngôn ngữ</string>
     <string name="warning_scam">Cảnh báo lừa đảo</string>
     <string name="very_big">rất lớn</string>
-    <string name="menu">Menu</string>
+    <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
+    <string name="report_new">Báo cáo trường hợp mới</string>
     <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
-    <string name="update_package">Nâng cấp gói</string>
-    <string name="donate">Ủng hộ, góp ý kiến</string>
+    <string name="update_package">Ủng hộ nhà phát triển</string>
+    <string name="donate">Góp ý kiến</string>
     <string name="result_for_find">Kế quả tìm kiếm</string>
     <string name="report_scam">Cảnh báo lừa đảo</string>
     <string name="report">Cảnh báo</string>
-    <string name="report_new">Báo cáo TH mới</string>
+
+    <string name="report_new_item">Báo cáo</string>
+    <string name="menu">Menu</string>
     <string name="news">Tin tức</string>
     <string name="received_news">Nhận báo cáo nội dung mới</string>
-    <string name="call_invite">Cuộc gọi quảng cáo, mời chào</string>
-    <string name="message_ads">Tin nhắn quảng cáo</string>
-    <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
-    <string name="report_new_item">Báo cáo</string>
+    <string name="call_invite">Cuộc gọi quảng cáo, mời chào tự động</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.trustcheck.ui.news
+package com.example.trustcheck.ui.views.news
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

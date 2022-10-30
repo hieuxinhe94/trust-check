@@ -44,7 +44,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.news.NewsScreen"
+            android:name="com.example.trustcheck.ui.views.news.NewsScreen"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -105,11 +105,6 @@
                 <data android:scheme="mmsto" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.views.intro.IntroActivity"
-            android:exported="true"
-            android:label="TrustCheck" />
-
         <receiver
             android:name=".ui.receiver.CallReceiver"
             android:enabled="true"

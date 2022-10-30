@@ -68,9 +68,11 @@
     <!--main-->
     <string name="upgrade_title">Nâng cấp</string>
 
-    <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo</string>
-    <string name="block_message">Cảnh báo tin nhắn lừa đảo, quảng cáo</string>
-    <string name="warning_new_prototype">Cảnh báo phương thức lừa đảo mới</string>
+
+    <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo.</string>
+    <string name="block_message">Cảnh báo tin nhắn rác, giả mạo, lừa đảo.</string>
+    <string name="warning_scam_app" translatable="false">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
+    <string name="warning_new_prototype">Nhận những cảnh báo phương thức lừa đảo mới xuất hiện</string>
     <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
     <string name="ignore">Bỏ qua</string>
     <string name="got_it">Đã hiểu</string>
@@ -106,5 +108,6 @@
     <string name="message_ads">Tin nhắn quảng cáo</string>
     <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
     <string name="report_new_item">Báo cáo</string>
+    <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
 
 </resources>

@@ -15,4 +15,6 @@
 
     <dimen name="text_16sp">16sp</dimen>
     <dimen name="text_25sp">25sp</dimen>
+    <dimen name="text_size_lg">16sp</dimen>
+
 </resources>
