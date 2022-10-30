@@ -70,7 +70,7 @@
 
     <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo.</string>
     <string name="block_message">Cảnh báo tin nhắn rác, giả mạo, lừa đảo.</string>
-    <string name="warning_scam_app">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
+    <string name="warning_scam_app" translatable="false">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
     <string name="warning_new_prototype">Nhận những cảnh báo phương thức lừa đảo mới xuất hiện</string>
     <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
     <string name="ignore">Bỏ qua</string>
@@ -94,10 +94,9 @@
     <string name="warning_scam">Cảnh báo lừa đảo</string>
     <string name="very_big">rất lớn</string>
     <string name="menu">Menu</string>
-
-    <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
+    <string name="custom_app">Tuỳ chỉnh </string>
     <string name="update_package">Nâng cấp gói</string>
-    <string name="donate">Ủng hộ, góp ý kiến</string>
+    <string name="donate">Phản hồi</string>
     <string name="result_for_find">Kế quả tìm kiếm</string>
     <string name="report_scam">Cảnh báo lừa đảo</string>
     <string name="report">Cảnh báo</string>
@@ -106,7 +105,7 @@
     <string name="news">Tin tức</string>
     <string name="received_news">Nhận báo cáo nội dung mới</string>
     <string name="call_invite">Cuộc gọi quảng cáo, mời chào</string>
-    <string name="message_ads">Tin nhắn quảng cáo</string>
-    <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
+    <string name="message_ads" translatable="false">Tin nhắn quảng cáo</string>
+    <string name="warning_settings" translatable="false">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
     <string name="report_new_item">Báo cáo</string>
 </resources>

@@ -97,5 +97,16 @@
     <string name="slogan">Scam and Spam Blocker</string>
 
     <string name="report_new_item">Báo cáo</string>
+    <string name="menu">Menu</string>
+    <string name="custom_app">Settings</string>
+    <string name="update_package">Upgrade to Premium</string>
+    <string name="donate">Feedback</string>
+    <string name="result_for_find">Search result</string>
+    <string name="report_scam">Scam warning</string>
+    <string name="report">Warning</string>
+    <string name="report_new">Report new case</string>
+    <string name="news">News</string>
+    <string name="received_news">Subcribe new warning cases</string>
+    <string name="call_invite">Marketing automate call</string>
 
 </resources>

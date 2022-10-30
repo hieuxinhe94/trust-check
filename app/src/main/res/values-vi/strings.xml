@@ -96,12 +96,16 @@
     <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
     <string name="report_new">Báo cáo trường hợp mới</string>
     <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
-    <string name="update_package">Nâng cấp gói</string>
-    <string name="donate">Ủng hộ, góp ý kiến</string>
+    <string name="update_package">Ủng hộ nhà phát triển</string>
+    <string name="donate">Góp ý kiến</string>
     <string name="result_for_find">Kế quả tìm kiếm</string>
     <string name="report_scam">Cảnh báo lừa đảo</string>
     <string name="report">Cảnh báo</string>
 
     <string name="report_new_item">Báo cáo</string>
+    <string name="menu">Menu</string>
+    <string name="news">Tin tức</string>
+    <string name="received_news">Nhận báo cáo nội dung mới</string>
+    <string name="call_invite">Cuộc gọi quảng cáo, mời chào tự động</string>
 
 </resources>
