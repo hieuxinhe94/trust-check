@@ -1,5 +1,106 @@
 <resources>
     <string name="app_name">TrustCheck</string>
-
     <string name="understand">I understand</string>
+    <string name="app_intro_skip_button">SKIP</string>
+    <string name="app_intro_next_button">NEXT</string>
+    <string name="app_intro_back_button">BACK</string>
+    <string name="app_intro_done_button">DONE</string>
+    <string name="app_intro_image_content_description">graphics</string>
+
+    <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="demo_title">Lorem Ipsum</string>
+    <string name="example_1">Example 1</string>
+    <string name="walkthrough">Examples of <b> walkthrough/onboarding/first-time users </b> screen in android studio</string>
+    <string name="example_2">Example 2</string>
+    <string name="example_3">Example 3</string>
+    <string name="example_4">Example 4</string>
+
+    <string name="en_language">English</string>
+    <string name="vi_language">Tiếng việt</string>
+
+
+    <!-- BlacklistActivity -->
+    <string name="blacklist_block_hidden_numbers">Block hidden numbers</string>
+    <string name="blacklist_show_notifications">Show notifications</string>
+    <string name="blacklist_about">About NoPhoneSpam</string>
+    <string name="blacklist_permissions_required">NoPhoneSpam doesn\'t have the permissions to work.</string>
+    <string name="blacklist_request_permissions">Request permissions</string>
+    <plurals name="blacklist_call_details">
+        <item quantity="one">Called at %2$s</item>
+        <item quantity="other">%1$d calls, last: %2$s</item>
+    </plurals>
+    <string name="all_calls">Allow All Calls</string>
+    <string name="allow_contacts">Allow Calls only from Contacts</string>
+    <string name="allow_list">Allow Calls only from this list</string>
+    <string name="block_list">Block all Calls from this list</string>
+    <string name="block_all">Block All Calls</string>
+
+    <string name="blacklist_import">Import Blacklist</string>
+    <string name="blacklist_export">Export Blacklist</string>
+    <string name="blacklist_exported_to">Exported to</string>
+
+    <!-- EditActivity -->
+    <string name="edit_add_number">Add number</string>
+    <string name="edit_edit_number">Edit number</string>
+    <string name="edit_save">Save</string>
+    <string name="edit_cancel">Cancel</string>
+    <string name="edit_delete">Delete</string>
+    <string name="edit_name">Name</string>
+    <string name="edit_name_hint">Annoying Spammer</string>
+    <string name="edit_number">Number</string>
+    <string name="edit_number_hint">+1-555-12345</string>
+    <string name="edit_number_hints">Enter the number in +COUNTRY-NUMBER format (as Android would show in your dialer). Use \"*\" as a wildcard for zero or more digits, and \"#\" for exactly one digit.</string>
+    <string name="edit_must_not_be_empty">Must not be empty</string>
+    <string name="edit_changes_saved">Changes saved</string>
+
+    <!-- CallReceiver -->
+
+    <string name="receiver_notify_no_call_allowed">All calls are being blocked</string>
+    <string name="receiver_notify_not_found_in_contacts">Number was not found in Contacts</string>
+    <string name="receiver_notify_number_was_not_in_list">Number was not found in allowed caller\'s list</string>
+    <string name="receiver_notify_number_was_in_list">Number was found in un-allowed caller\'s list</string>
+
+
+    <string name="receiver_notify_call_rejected">Call rejected</string>
+    <string name="receiver_notify_private_number">Private number</string>
+    <string name="receiver_notify_unknown_caller">Unknown caller</string>
+    <string name="call_blocking_unsupported">Can\'t block calls in this Android version</string>
+    <!--main-->
+    <string name="upgrade_title">Nâng cấp</string>
+
+    <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo.</string>
+    <string name="block_message">Cảnh báo tin nhắn rác, giả mạo, lừa đảo.</string>
+    <string name="warning_scam_app">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
+    <string name="warning_new_prototype">Nhận những cảnh báo phương thức lừa đảo mới xuất hiện</string>
+    <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
+    <string name="ignore">Bỏ qua</string>
+    <string name="got_it">Đã hiểu</string>
+    <string name="get_started">Bắt đầu</string>
+    <string name="next">Tiếp theo</string>
+    <string name="phone_message">Số điện thoại, tin nhắn</string>
+    <string name="find_image">Tìm ảnh</string>
+    <string name="suggest">Gợi ý</string>
+    <string name="near_warning">Cảnh báo gần đầy</string>
+    <string name="detail">Chi tiết</string>
+    <string name="custom">Tuỳ chỉnh</string>
+    <string name="complete">Hoàn tất</string>
+    <string name="received_new_warning">Nhận cảnh báo nội dung mới</string>
+    <string name="ad_call_auto">Cuộc gọi quảng cáo, tự động</string>
+    <string name="ad_message">Tin nhắn quảng cáo</string>
+    <string name="upgrade">Xin vui lòng nâng cấp gói để hỗ trợ tính năng nâng cao</string>
+    <string name="support_developer">Hỗ trợ nhà phát triển bằng cách mua gói nâng cao</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="choose_language">Chọn ngôn ngữ</string>
+    <string name="warning_scam">Cảnh báo lừa đảo</string>
+    <string name="very_big">rất lớn</string>
+    <string name="menu">Menu</string>
+    <string name="report_new">Báo cáo trường hợp mới</string>
+    <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
+    <string name="update_package">Nâng cấp gói</string>
+    <string name="donate">Ủng hộ, góp ý kiến</string>
+    <string name="result_for_find">Kế quả tìm kiếm</string>
+    <string name="report_scam">Cảnh báo lừa đảo</string>
+    <string name="report">Cảnh báo</string>
+    <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
+
 </resources>

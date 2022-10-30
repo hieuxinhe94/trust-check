@@ -25,7 +25,7 @@ class NetworkApiModule {
 
     @Singleton
     @Provides
-    fun providesRetrofit(okHttpClient: OkHttpClient) : Retrofit {
+    fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(ApiService.BASE_API_URL)
             .client(okHttpClient)

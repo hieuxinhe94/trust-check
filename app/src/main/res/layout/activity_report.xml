@@ -6,4 +6,135 @@
     android:layout_height="match_parent"
     tools:context=".ui.views.report.ReportActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        app:expanded="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:itemTextColor="@color/main_color"
+            app:menu="@menu/report_menu"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/result_for_find"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <TextView
+            android:id="@+id/id_donate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="+84967356524"
+            android:textColor="@color/main_color"
+            android:textSize="18dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/report_scam"
+                android:textColor="@color/main_color"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:text="Rất lớn"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:id="@+id/circularProgressbar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="50"
+                    android:layout_centerInParent="true"
+                    android:progressDrawable="@drawable/circular"
+                    android:secondaryProgress="100"
+                    />
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:text="25%"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/activeIndicators"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ProgressBar
+                    android:id="@+id/circularProgressbar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="50"
+                    android:layout_centerInParent="true"
+                    android:progressDrawable="@drawable/circular"
+                    android:secondaryProgress="100"
+                    />
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:text="25%"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/activeIndicators"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
