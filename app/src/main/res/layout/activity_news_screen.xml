@@ -92,22 +92,21 @@
             android:textColor="@color/textSecondary"
             android:textSize="16sp" />
 
-<!--        <com.yabu.livechart.view.LiveChart-->
-<!--            android:id="@+id/live_chart"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="200dp"-->
-<!--            android:layout_marginTop="@dimen/margin_8dp"-->
-<!--            app:baselineColor="@color/color_bg"-->
-<!--            app:baselineDashGap="8dp"-->
-<!--            app:baselineStrokeWidth="4dp"-->
-<!--            app:labelTextColor="@color/main_color"-->
-<!--            app:labelTextHeight="14sp"-->
-<!--            app:overlayCircleColor="@color/color_bg_search"-->
-<!--            app:overlayCircleDiameter="8dp"-->
-<!--            app:overlayLineColor="@color/color_error"-->
-<!--            app:pathColor="@color/color_primary"-->
-<!--            app:pathStrokeWidth="4dp"-->
-<!--            tools:ignore="MissingClass" />-->
+        <com.yabu.livechart.view.LiveChart
+            android:id="@+id/live_chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            app:baselineColor="@color/color_bg"
+            app:baselineDashGap="8dp"
+            app:baselineStrokeWidth="4dp"
+            app:labelTextColor="@color/main_color"
+            app:labelTextHeight="14sp"
+            app:overlayCircleColor="@color/color_bg_search"
+            app:overlayCircleDiameter="8dp"
+            app:overlayLineColor="@color/color_error"
+            app:pathColor="@color/color_primary"
+            app:pathStrokeWidth="4dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

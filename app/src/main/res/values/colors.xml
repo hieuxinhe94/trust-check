@@ -43,12 +43,6 @@
     <color name="main_color">#EF8354</color>
     <color name="color_bg_search">#E1E4F1</color>
     <color name="color_bg">#E5E8FE</color>
-
-    <color name="color_background_1">#39136d</color>
-    <color name="color_background_2">#E5E8FE</color>
-    <color name="color_transparent">#00FFFFFF</color>
-    <color name="color_text_purple_1">#39136d</color>
-    <color name="color_text_orange_1">#fc8019</color>
     <color name="text_color">#39424B</color>
     <color name="text_shadow">#BBBACE</color>
 
