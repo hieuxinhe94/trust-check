@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_bg"
     tools:context=".ui.views.home.HomeActivity">
 
     <ImageView
@@ -55,88 +56,106 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <EditText
-        android:id="@+id/edtSearch"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/edit_bg"
-        android:drawableStart="@drawable/ic_search"
-        android:hint="Số điện thoại, Tin nhắn, Tên, Đường Link... .."
-        android:inputType="text"
-        android:padding="10dp"
-        android:textCursorDrawable="@color/blackNavy"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <ImageView
-        android:id="@+id/attach_icon"
-        android:layout_width="@dimen/margin_24dp"
-        android:layout_height="@dimen/margin_24dp"
-        android:layout_marginTop="@dimen/margin_8dp"
-        android:layout_marginEnd="@dimen/margin_24dp"
-        android:tooltipText="Attach file?"
-        app:layout_constraintEnd_toEndOf="@+id/edtSearch"
-        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_bg"
+            android:drawableStart="@drawable/ic_search"
+            android:hint="Số điện thoại, Tin nhắn, Tên, Đường Link... .."
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/blackNavy" />
 
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/textView3"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="@dimen/dp_32"-->
-    <!--        android:text="Lừa đảo xuất hiện gần đây"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textSize="@dimen/text_16sp"-->
-    <!--        android:textStyle="bold"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/edtSearch"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />-->
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16"
-        android:layout_marginTop="@dimen/dp_32"
-        android:text="@string/warning_scam"
-        android:textColor="@color/black"
-        android:textSize="@dimen/text_16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/edtSearch"
-        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_4dp"
-        android:scrollbars="none"
-        android:paddingHorizontal="@dimen/margin_16"
-        android:paddingVertical="@dimen/margin_16"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_goneMarginTop="@dimen/margin_24dp" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="@+id/recycler_view"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view">
-
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-    </RelativeLayout>
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_3dp">
+
+            <ImageView
+                android:id="@+id/attach_icon"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
+                android:layout_gravity="end"
+
+                android:tooltipText="Attach file?"
+                app:layout_constraintEnd_toEndOf="@+id/edtSearch"
+                app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Tìm ảnh?"
+                android:textColor="@color/textSecondary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view">
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_32"
+            android:text="@string/warning_scam"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/edtSearch"
+            app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+
+        <View
+            android:layout_width="70dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/dp_3dp"
+            android:background="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4dp"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:paddingVertical="@dimen/margin_16"
+            android:scrollbars="none"
+
+            app:layout_goneMarginTop="@dimen/margin_24dp" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
