@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
@@ -25,6 +24,7 @@ class IntroduceActivity : AppCompatActivity() {
     private var buttonOnBoardingAction: MaterialButton? = null
     private var buttonIgnoreAction: MaterialButton? = null
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduce)
@@ -32,6 +32,8 @@ class IntroduceActivity : AppCompatActivity() {
         layoutOnBoardingIndicator = findViewById(R.id.layoutOnBoardingIndicators)
         buttonOnBoardingAction = findViewById(R.id.buttonOnBoardingAction)
         buttonIgnoreAction = findViewById(R.id.buttonOnBoardingIgnore)
+
+
 
         setOnboardingItem()
 
@@ -67,6 +69,7 @@ class IntroduceActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
+
     }
 
     private fun setOnBoardingIndicator() {
@@ -109,7 +112,6 @@ class IntroduceActivity : AppCompatActivity() {
                 )
             }
         }
-
         if (index == (onBoardingAdapter?.itemCount ?: 1) - 1) {
             buttonOnBoardingAction?.text = getString(R.string.get_started)
             buttonIgnoreAction?.visibility = View.INVISIBLE;
