@@ -2,10 +2,10 @@
 <resources>
     <string name="app_name">Trust Check</string>
     <string name="understand">Tôi hiểu</string>
-    <string name="app_intro_skip_button">SKIP</string>
-    <string name="app_intro_next_button">NEXT</string>
-    <string name="app_intro_back_button">BACK</string>
-    <string name="app_intro_done_button">DONE</string>
+    <string name="app_intro_skip_button">Bỏ qua</string>
+    <string name="app_intro_next_button">Tiếp theo</string>
+    <string name="app_intro_back_button">Quay lại</string>
+    <string name="app_intro_done_button">Xong</string>
 
     <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="demo_title">Lorem Ipsum</string>

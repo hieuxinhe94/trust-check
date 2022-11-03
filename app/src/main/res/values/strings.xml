@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TrustCheck</string>
-    <string name="understand">I understand</string>
+    <string name="understand">Tôi hiểu</string>
     <string name="app_intro_skip_button">SKIP</string>
     <string name="app_intro_next_button">NEXT</string>
     <string name="app_intro_back_button">BACK</string>
@@ -60,7 +60,7 @@
     <string name="receiver_notify_number_was_in_list">Number was found in un-allowed caller\'s list</string>
 
 
-    <string name="receiver_notify_call_rejected">Call rejected</string>
+    <string name="receiver_notify_call_rejected">Cuộc gọi đã từ chối</string>
     <string name="receiver_notify_private_number">Private number</string>
     <string name="receiver_notify_unknown_caller">Unknown caller</string>
     <string name="call_blocking_unsupported">Can\'t block calls in this Android version</string>
@@ -68,10 +68,10 @@
     <string name="upgrade_title">Nâng cấp</string>
 
 
-    <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo.</string>
-    <string name="block_message">Cảnh báo tin nhắn rác, giả mạo, lừa đảo.</string>
-    <string name="warning_scam_app">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
-    <string name="warning_new_prototype">Nhận những cảnh báo phương thức lừa đảo mới xuất hiện</string>
+    <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo</string>
+    <string name="block_message">Cảnh báo tin nhắn lừa đảo, quảng cáo</string>
+    <string name="warning_scam_app">Cảnh báo ứng dụng lừa đảo bạn đã cài</string>
+    <string name="warning_new_prototype">Cảnh báo phương thức lừa đảo mới</string>
     <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
     <string name="ignore">Bỏ qua</string>
     <string name="got_it">Đã hiểu</string>
@@ -91,7 +91,7 @@
     <string name="support_developer">Hỗ trợ nhà phát triển bằng cách mua gói nâng cao</string>
     <string name="language">Ngôn ngữ</string>
     <string name="choose_language">Chọn ngôn ngữ</string>
-    <string name="warning_scam">Cảnh báo lừa đảo</string>
+    <string name="warning_scam">Cảnh báo lừa đảo mới</string>
     <string name="very_big">rất lớn</string>
     <string name="menu">Menu</string>
     <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
@@ -108,5 +108,8 @@
     <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
     <string name="report_new_item">Báo cáo</string>
     <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
+    <string name="search_hint"> Số điện thoại, Tin nhắn, Tên, Đường Link... ..</string>
+    <string name="attack_file">Kèm ảnh?</string>
+    <string name="tip_hint">Gợi ý</string>
 
 </resources>

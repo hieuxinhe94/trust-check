@@ -72,7 +72,7 @@
     <string name="block_call">" Block scam and spam callers"</string>
     <string name="block_message">" Block scam and spam messages"</string>
     <string name="warning_new_prototype">" New scams warning"</string>
-    <string name="commitment"> We confirm your data never be uploaded. TrustCheck only process in this device.</string>
+    <string name="commitment">" New scams warning"</string>
     <string name="ignore">Skip</string>
     <string name="got_it">Understood</string>
     <string name="get_started">Done</string>
