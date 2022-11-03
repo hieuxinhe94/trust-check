@@ -20,6 +20,7 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/top_bar_menu"
+            android:background="@color/color_bg"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:itemTextColor="@color/main_color"
