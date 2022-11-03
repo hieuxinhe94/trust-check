@@ -10,32 +10,32 @@
     android:padding="20dp">
 
     <ImageView
+        android:id="@+id/imageOnboarding"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/imageOnBoarding"
+        android:layout_height="400dp"
         android:adjustViewBounds="true"
-        android:padding="10dp"
-        android:contentDescription="@string/app_name" />
+        android:contentDescription="@string/app_name"
+        android:padding="5dp" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/textTitle"
-        android:paddingTop="5dp"
-        android:gravity="center_horizontal"
-        android:textColor="@color/color_text_orange_1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/quicksand_bold"
-        android:textSize="18sp"
-        />
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/color_text_orange_1"
+        android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/textDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textDescription"
-        android:gravity="center"
-        android:fontFamily="@font/quicksand_regular"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/product_sans_regular"
+        android:gravity="center"
         android:textColor="@color/textSecondary"
         android:textSize="17sp" />
 

@@ -7,82 +7,68 @@
     android:background="@color/color_bg"
     tools:context=".ui.views.home.HomeActivity">
 
-    <TextView
-        android:id="@+id/home_logo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:text="@string/app_name"
-        android:fontFamily="@font/quicksand_bold"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/color_text_purple_1"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/setting_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_setting"
-        app:tint="@color/main_color" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/relative_toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="2dp"
-        android:text="@string/slogan"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="normal"
-        android:fontFamily="@font/quicksand_regular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_logo_text" />
+        android:paddingHorizontal="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/trust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="35dp"
+            android:text="TRUST"
+            android:textColor="@color/textSecondary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/trust"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_icon" />
+
+        <ImageView
+            android:id="@+id/setting_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_setting" />
+
+    </RelativeLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="24dp"
         android:paddingHorizontal="@dimen/margin_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-<!--        <TextView-->
-<!--            android:id="@+id/labelSearch"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Tìm kiếm:"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="@dimen/text_size_lg"-->
-<!--            android:fontFamily="@font/quicksand_semibold"-->
-<!--          />-->
+        app:layout_constraintTop_toBottomOf="@+id/relative_toolbar">
 
         <EditText
             android:id="@+id/edtSearch"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="16dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/edit_bg"
             android:drawableStart="@drawable/ic_search"
-            android:fontFamily="@font/quicksand_regular"
-            android:hint="@string/search_hint"
-            android:textSize="@dimen/text_size_lg"
+            android:drawableTint="@color/white"
+            android:hint="Số điện thoại, Tin nhắn, Tên, Đường Link... .."
             android:inputType="text"
+            android:padding="10dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            />
+            android:textCursorDrawable="@color/blackNavy" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -94,10 +80,10 @@
 
             <ImageView
                 android:id="@+id/attach_icon"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
                 android:layout_gravity="end"
-                android:paddingTop="@dimen/dp_3dp"
+
                 android:tooltipText="Attach file?"
                 app:layout_constraintEnd_toEndOf="@+id/edtSearch"
                 app:layout_constraintTop_toBottomOf="@+id/edtSearch"
@@ -109,68 +95,30 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="@string/attack_file"
-                android:fontFamily="@font/quicksand_regular"
+                android:text="Tìm ảnh?"
                 android:textColor="@color/textSecondary"
                 android:textSize="16sp" />
         </LinearLayout>
 
+
+        <TextView
+            android:id="@+id/suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="2dp"
+            android:text="Gợi ý..."
+            android:textColor="@color/textSecondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_idea" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-
-            app:layout_constraintStart_toStartOf="@+id/recycler_view"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_view">
-
-          <androidx.cardview.widget.CardView
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              app:cardBackgroundColor="@color/white"
-              app:cardCornerRadius="8dp"
-              >
-
-              <ImageView
-                  android:layout_gravity="start"
-                  android:id="@+id/icon_idea"
-                  android:layout_width="@dimen/margin_24dp"
-                  android:layout_height="@dimen/margin_24dp"
-                  android:padding="@dimen/dp_3dp"
-
-                  android:layout_marginTop="@dimen/dp_3dp"
-                  android:tooltipText="@string/tip_hint"
-                  app:srcCompat="@drawable/ic_idea" />
-
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="start"
-                  android:layout_marginStart="24dp"
-                  android:layout_marginTop="@dimen/dp_3dp"
-                  android:text="@string/tip_hint"
-                  android:textColor="@color/black"
-                  android:fontFamily="@font/quicksand_semibold"
-                  android:textSize="@dimen/text_size_lg" />
-
-              <TextView
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="24dp"
-                  android:layout_marginStart="8dp"
-                  android:lineSpacingExtra="@dimen/margin_8dp"
-                  android:textColor="@color/black"
-                  android:fontFamily="@font/quicksand_regular"
-                  android:text="@string/demo_content" />
-
-          </androidx.cardview.widget.CardView>
-
-        </RelativeLayout>
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:background="@color/white"
             app:layout_constraintStart_toStartOf="@+id/recycler_view"
             app:layout_constraintTop_toBottomOf="@+id/recycler_view">
 
@@ -178,8 +126,8 @@
                 android:id="@+id/adView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 ads:adSize="BANNER"
                 ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
         </RelativeLayout>
@@ -191,13 +139,13 @@
             android:layout_marginTop="@dimen/dp_32"
             android:text="@string/warning_scam"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_lg"
-            android:fontFamily="@font/quicksand_semibold"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/edtSearch"
             app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
 
         <View
-            android:layout_width="124dp"
+            android:layout_width="70dp"
             android:layout_height="2dp"
             android:layout_marginTop="@dimen/dp_3dp"
             android:background="@color/black" />
@@ -207,8 +155,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_4dp"
+            android:paddingHorizontal="@dimen/margin_16"
             android:paddingVertical="@dimen/margin_16"
             android:scrollbars="none"
+
             app:layout_goneMarginTop="@dimen/margin_24dp" />
     </LinearLayout>
 

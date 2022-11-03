@@ -85,7 +85,7 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
         }
-        editSearch?.addTextChangedListener(object : TextWatcher{
+        editSearch?.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
@@ -95,7 +95,7 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                if(editSearch!!.text.isNotEmpty() || isValidPhoneNumber(editSearch!!.text.toString())){
+                if (editSearch!!.text.isNotEmpty() && isValidPhoneNumber(editSearch!!.text.toString())) {
                     var intent = Intent(applicationContext, ReportActivity::class.java)
                     startActivity(intent)
                 }
@@ -105,7 +105,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun isValidPhoneNumber(phone: String): Boolean {
-        return if (phone.trim { it <= ' ' } != "" && phone.length > 10) {
+        return if (phone.trim { it <= ' ' } != "" && phone.length >= 10) {
             Patterns.PHONE.matcher(phone).matches()
         } else false
     }

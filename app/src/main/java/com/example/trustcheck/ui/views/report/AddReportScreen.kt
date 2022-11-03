@@ -8,14 +8,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trustcheck.R
 import com.example.trustcheck.data.models.RecentWarning
-import com.example.trustcheck.ui.adapter.WarningAdapter
+import com.example.trustcheck.ui.adapter.AddReportAdapter
 import kotlinx.android.synthetic.main.activity_add_report_screen.*
-import kotlinx.android.synthetic.main.activity_news_screen.*
 
 class AddReportScreen : AppCompatActivity(), View.OnClickListener {
 
     private var recyclerView: RecyclerView? = null
-    private var warningAdapter: WarningAdapter? = null
+    private var addReportAdapter: AddReportAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +25,7 @@ class AddReportScreen : AppCompatActivity(), View.OnClickListener {
 
     private fun initView() {
         recyclerView = findViewById(R.id.recycler_view)
-        //top_bar_news.setOnClickListener(this)
+        topAppBar.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -52,13 +51,13 @@ class AddReportScreen : AppCompatActivity(), View.OnClickListener {
         listWarning.add(w3)
         listWarning.add(w4)
         listWarning.add(w5)
-        warningAdapter = WarningAdapter(listWarning)
+        addReportAdapter = AddReportAdapter(listWarning)
         recyclerView?.addItemDecoration(
             DividerItemDecoration(
                 this,
                 LinearLayoutManager.VERTICAL
             )
         )
-        recyclerView?.adapter = warningAdapter
+        recyclerView?.adapter = addReportAdapter
     }
 }

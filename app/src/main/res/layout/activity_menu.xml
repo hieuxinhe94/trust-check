@@ -29,9 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="100dp"
+                android:fontFamily="@font/quicksand_bold"
                 android:gravity="center"
                 android:text="@string/menu"
-                android:fontFamily="@font/quicksand_bold"
                 android:textAppearance="?attr/textAppearanceHeadline6" />
 
         </com.google.android.material.appbar.MaterialToolbar>
@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/report_new"
             android:fontFamily="@font/quicksand_bold"
+            android:text="@string/report_new"
             android:textColor="@color/text_color"
             android:textSize="@dimen/text_size_lg" />
 
@@ -67,9 +67,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/custom_app"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
             android:textSize="@dimen/text_size_lg" />
 
         <View
@@ -83,9 +83,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/update_package"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
             android:textSize="@dimen/text_size_lg" />
 
         <View
@@ -99,9 +99,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/language"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
             android:textSize="@dimen/text_size_lg" />
 
         <View
@@ -116,9 +116,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
             android:text="@string/donate"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
             android:textSize="@dimen/text_size_lg" />
     </LinearLayout>
 

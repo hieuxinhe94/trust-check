@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.trustcheck.R
-import com.example.trustcheck.ui.views.news.NewsScreen
 import com.example.trustcheck.ui.views.custom.CustomActivity
 import com.example.trustcheck.ui.views.language.MultiLanguageScreen
+import com.example.trustcheck.ui.views.news.NewsScreen
 import com.example.trustcheck.ui.views.report.AddReportScreen
 import kotlinx.android.synthetic.main.activity_menu.*
 
@@ -45,7 +45,7 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, NewsScreen::class.java))
 
             }
-            R.id.top_bar_menu ->{
+            R.id.top_bar_menu -> {
                 onBackPressed()
             }
 

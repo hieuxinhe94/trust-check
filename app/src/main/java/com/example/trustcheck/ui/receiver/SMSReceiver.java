@@ -1,21 +1,15 @@
 package com.example.trustcheck.ui.receiver;
 
-import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.provider.BaseColumns;
 import android.provider.Telephony;
 import android.telephony.SmsMessage;
 
 import com.example.trustcheck.data.models.PhoneNumber;
-import com.example.trustcheck.ui.Observer.SmsObservable;
 import com.example.trustcheck.ui.helper.DBHelper;
 import com.example.trustcheck.ui.utils.Logger;
 
