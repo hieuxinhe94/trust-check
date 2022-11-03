@@ -22,9 +22,9 @@
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_bg"
             app:itemTextColor="@color/main_color"
             app:menu="@menu/report_menu"
-            android:background="@color/color_bg"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
 
             <TextView
@@ -44,22 +44,23 @@
         android:paddingHorizontal="@dimen/margin_16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar">
+
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nhập đối tượng"
             android:layout_centerInParent="true"
-            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Nhập đối tượng"
             android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <View
-            android:layout_marginTop="@dimen/dp_3dp"
             android:layout_width="70dp"
             android:layout_height="2dp"
-            android:background="@color/black"/>
+            android:layout_marginTop="@dimen/dp_3dp"
+            android:background="@color/black" />
 
         <EditText
             android:id="@+id/edtSearch"
@@ -74,51 +75,54 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
-       <LinearLayout
-           android:paddingVertical="@dimen/dp_3dp"
-           android:gravity="center"
-           android:layout_gravity="end"
-           android:orientation="horizontal"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-           <ImageView
-               android:layout_gravity="end"
-               android:id="@+id/attach_icon"
-               android:layout_width="@dimen/margin_24dp"
-               android:layout_height="@dimen/margin_24dp"
 
-               android:tooltipText="Attach file?"
-               app:layout_constraintEnd_toEndOf="@+id/edtSearch"
-               app:layout_constraintTop_toBottomOf="@+id/edtSearch"
-               app:layout_constraintVertical_bias="0.0"
-               app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_3dp">
 
-           <TextView
-               android:layout_marginTop="10dp"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="Thêm ảnh"
-               android:layout_gravity="center_horizontal"
-               android:textColor="@color/textSecondary"
-               android:textSize="16sp" />
-       </LinearLayout>
+            <ImageView
+                android:id="@+id/attach_icon"
+                android:layout_width="@dimen/margin_24dp"
+                android:layout_height="@dimen/margin_24dp"
+                android:layout_gravity="end"
+
+                android:tooltipText="Attach file?"
+                app:layout_constraintEnd_toEndOf="@+id/edtSearch"
+                app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Thêm ảnh"
+                android:textColor="@color/textSecondary"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phân loại"
             android:layout_centerInParent="true"
-            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_idea"
+            android:text="Phân loại"
             android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <View
-            android:layout_marginTop="@dimen/dp_3dp"
             android:layout_width="70dp"
             android:layout_height="2dp"
-            android:background="@color/black"/>
+            android:layout_marginTop="@dimen/dp_3dp"
+            android:background="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
@@ -134,15 +138,15 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phương thức"
             android:layout_centerInParent="true"
-            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Phương thức"
             android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="match_parent"
@@ -154,30 +158,30 @@
             android:textCursorDrawable="@color/blackNavy" />
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chọn 1 hoặc nhiều phân loại"
             android:layout_centerInParent="true"
-            android:textStyle="bold"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Chọn 1 hoặc nhiều phân loại"
             android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <View
-            android:layout_marginTop="@dimen/dp_3dp"
             android:layout_width="70dp"
             android:layout_height="2dp"
-            android:background="@color/black"/>
+            android:layout_marginTop="@dimen/dp_3dp"
+            android:background="@color/black" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_4dp"
-            android:scrollbars="none"
             android:paddingHorizontal="@dimen/margin_16"
             android:paddingVertical="@dimen/margin_16"
+            android:scrollbars="none"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_goneMarginTop="@dimen/margin_24dp" />

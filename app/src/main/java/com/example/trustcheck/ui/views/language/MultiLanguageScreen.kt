@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.trustcheck.R
 import com.example.trustcheck.ui.helper.LocaleHelper
 import kotlinx.android.synthetic.main.activity_multi_language_screen.*
@@ -27,19 +28,40 @@ class MultiLanguageScreen : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.edt_en -> {
-                edt_en.setBackgroundColor(getColor(R.color.main_color))
-                edt_vi.setBackgroundColor(getColor(R.color.white))
+                edt_en.setBackgroundDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.border_main_color
+                    )
+                )
+                edt_vi.setBackgroundDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.border_brown
+                    )
+                )
+
                 color_index = 1
                 LocaleHelper.setLocale(this, "en")
             }
             R.id.edt_vi -> {
-                edt_vi.setBackgroundColor(getColor(R.color.main_color))
-                edt_en.setBackgroundColor(getColor(R.color.white))
+                edt_vi.setBackgroundDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.border_main_color
+                    )
+                )
+                edt_en.setBackgroundDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.border_brown
+                    )
+                )
                 color_index = 2
                 LocaleHelper.setLocale(this, "vi")
             }
             R.id.top_bar_language -> {
-               onBackPressed()
+                onBackPressed()
             }
 
         }

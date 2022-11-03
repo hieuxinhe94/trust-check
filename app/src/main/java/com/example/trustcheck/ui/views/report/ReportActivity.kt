@@ -1,6 +1,7 @@
 package com.example.trustcheck.ui.views.report
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,8 +12,9 @@ import com.example.trustcheck.ui.adapter.WarningAdapter
 import com.yabu.livechart.model.DataPoint
 import com.yabu.livechart.model.Dataset
 import com.yabu.livechart.view.LiveChart
+import kotlinx.android.synthetic.main.activity_report.*
 
-class ReportActivity : AppCompatActivity() {
+class ReportActivity : AppCompatActivity(), View.OnClickListener {
     private var recyclerView: RecyclerView? = null
     private var warningAdapter: WarningAdapter? = null
     private var liveChart: LiveChart? = null
@@ -22,7 +24,7 @@ class ReportActivity : AppCompatActivity() {
         setContentView(R.layout.activity_report)
         recyclerView = findViewById(R.id.recycler_view)
         liveChart = findViewById(R.id.live_chart)
-
+        top_back_screen.setOnClickListener(this)
         displayWarning()
         init()
     }
@@ -51,14 +53,25 @@ class ReportActivity : AppCompatActivity() {
         recyclerView?.adapter = warningAdapter
     }
 
-    private fun init(){
-        val dataset = Dataset(mutableListOf(
-            DataPoint(0f, 1f),
-            DataPoint(1f, 3f),
-            DataPoint(2f, 6f)))
+    private fun init() {
+        val dataset = Dataset(
+            mutableListOf(
+                DataPoint(0f, 1f),
+                DataPoint(1f, 3f),
+                DataPoint(2f, 6f)
+            )
+        )
         liveChart?.setDataset(dataset)?.drawYBounds()
             ?.drawBaseline()
             ?.drawFill()
             ?.drawDataset()
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.top_back_screen -> {
+                onBackPressed()
+            }
+        }
     }
 }
