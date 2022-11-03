@@ -41,7 +41,7 @@ class OnBoardingAdapter(onBoardingItems: List<OnBoardingItem>) :
         init {
             textTitle = itemView.findViewById(R.id.textTitle)
             textDescription = itemView.findViewById(R.id.textDescription)
-            imageOnBoarding = itemView.findViewById(R.id.imageOnboarding)
+            imageOnBoarding = itemView.findViewById(R.id.imageOnBoarding)
         }
 
         fun setOnBoardingData(onBoardingItem: OnBoardingItem) {

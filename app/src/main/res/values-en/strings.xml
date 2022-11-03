@@ -7,7 +7,6 @@
     <string name="app_intro_next_button">NEXT</string>
     <string name="app_intro_back_button">BACK</string>
     <string name="app_intro_done_button">DONE</string>
-    <string name="app_intro_image_content_description">graphics</string>
 
     <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="demo_title">Lorem Ipsum</string>
@@ -70,9 +69,9 @@
     <!--main-->
     <string name="upgrade_title">Upgrade</string>
 
-    <string name="block_call"> Blocker Scam/Spam Callers</string>
-    <string name="block_message"> Blocker Scam/Spam Messages</string>
-    <string name="warning_new_prototype"> New Scams Warning</string>
+    <string name="block_call">" Block scam and spam callers"</string>
+    <string name="block_message">" Block scam and spam messages"</string>
+    <string name="warning_new_prototype">" New scams warning"</string>
     <string name="commitment"> We confirm your data never be uploaded. TrustCheck only process in this device.</string>
     <string name="ignore">Skip</string>
     <string name="got_it">Understood</string>
@@ -81,7 +80,7 @@
     <string name="phone_message">Phone calls, messages</string>
     <string name="find_image">Pick image</string>
     <string name="suggest">Tips</string>
-    <string name="near_warning">New Scam Warning</string>
+    <string name="near_warning">New scams</string>
     <string name="detail">More detail</string>
     <string name="custom">Customize</string>
     <string name="complete">Done</string>
@@ -108,5 +107,8 @@
     <string name="news">News</string>
     <string name="received_news">Subcribe new warning cases</string>
     <string name="call_invite">Marketing automate call</string>
+    <string name="warning_scam_app" translatable="false">Warning scam applications</string>
+    <string name="message_ads">message ads</string>
+    <string name="warning_settings">"scam app warning "</string>
 
 </resources>

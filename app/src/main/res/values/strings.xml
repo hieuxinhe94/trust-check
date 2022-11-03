@@ -5,7 +5,6 @@
     <string name="app_intro_next_button">NEXT</string>
     <string name="app_intro_back_button">BACK</string>
     <string name="app_intro_done_button">DONE</string>
-    <string name="app_intro_image_content_description">graphics</string>
 
     <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="demo_title">Lorem Ipsum</string>
@@ -71,7 +70,7 @@
 
     <string name="block_call">Chặn cuộc gọi làm phiền, lừa đảo.</string>
     <string name="block_message">Cảnh báo tin nhắn rác, giả mạo, lừa đảo.</string>
-    <string name="warning_scam_app" translatable="false">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
+    <string name="warning_scam_app">Cảnh báo ứng dụng giả mạo trên điện thoại</string>
     <string name="warning_new_prototype">Nhận những cảnh báo phương thức lừa đảo mới xuất hiện</string>
     <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
     <string name="ignore">Bỏ qua</string>

@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/language"
+                android:fontFamily="@font/quicksand_bold"
                 android:textAppearance="?attr/textAppearanceHeadline6" />
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -45,9 +46,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/choose_language"
+        android:fontFamily="@font/quicksand_bold"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/text_size_lg"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
@@ -56,13 +58,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/margin_16"
         android:gravity="center_vertical"
         android:padding="@dimen/padding_5"
         android:text="@string/en_language"
+        android:fontFamily="@font/quicksand_semibold"
         android:background="@drawable/border_white"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size_lg"
         android:textColor="@color/text_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_title" />
@@ -78,8 +81,9 @@
         android:gravity="center_vertical"
         android:padding="@dimen/padding_5"
         android:text="@string/vi_language"
+        android:fontFamily="@font/quicksand_semibold"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size_lg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_en" />
 

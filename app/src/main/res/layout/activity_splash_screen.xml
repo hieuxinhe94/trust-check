@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg"
+    android:background="@color/white"
     tools:context=".ui.views.splash.SplashScreen">
 
     <ImageView
@@ -17,12 +17,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo"
         />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/slogan"
-        android:textColor="@color/white"
-        android:fontFamily="@font/product_sans_regular"
+        android:textColor="@color/color_text_purple_1"
+        android:fontFamily="@font/quicksand_bold"
         android:layout_marginTop="25dp"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -30,6 +31,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/logo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:breakStrategy="balanced"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

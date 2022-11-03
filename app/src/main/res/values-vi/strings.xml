@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Trust Check</string>
-    <string name="understand">I understand</string>
+    <string name="understand">Tôi hiểu</string>
     <string name="app_intro_skip_button">SKIP</string>
     <string name="app_intro_next_button">NEXT</string>
     <string name="app_intro_back_button">BACK</string>
     <string name="app_intro_done_button">DONE</string>
-    <string name="app_intro_image_content_description">graphics</string>
 
     <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="demo_title">Lorem Ipsum</string>
@@ -62,7 +61,7 @@
     <string name="receiver_notify_number_was_in_list">Number was found in un-allowed caller\'s list</string>
 
 
-    <string name="receiver_notify_call_rejected">Call rejected</string>
+    <string name="receiver_notify_call_rejected">Cuộc gọi đã từ chối</string>
     <string name="receiver_notify_private_number">Private number</string>
     <string name="receiver_notify_unknown_caller">Unknown caller</string>
     <string name="call_blocking_unsupported">Can\'t block calls in this Android version</string>
@@ -107,5 +106,8 @@
     <string name="news">Tin tức</string>
     <string name="received_news">Nhận báo cáo nội dung mới</string>
     <string name="call_invite">Cuộc gọi quảng cáo, mời chào tự động</string>
+    <string name="warning_scam_app" translatable="false">Cảnh báo ứng dụng lừa đảo bạn đã cài</string>
+    <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
+    <string name="message_ads">Tin nhắn quảng cáo</string>
 
 </resources>
