@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="@string/slogan"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -50,16 +50,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="24dp"
         android:paddingHorizontal="@dimen/margin_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
+<!--        <TextView-->
+<!--            android:id="@+id/labelSearch"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tìm kiếm:"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/text_size_lg"-->
+<!--            android:fontFamily="@font/quicksand_semibold"-->
+<!--          />-->
+
         <EditText
             android:id="@+id/edtSearch"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:background="@drawable/edit_bg"
@@ -122,6 +133,8 @@
                   android:id="@+id/icon_idea"
                   android:layout_width="@dimen/margin_24dp"
                   android:layout_height="@dimen/margin_24dp"
+                  android:padding="@dimen/dp_3dp"
+                  android:layout_margin="1dp"
                   android:tooltipText="@string/tip_hint"
                   app:srcCompat="@drawable/ic_idea" />
 
@@ -131,6 +144,7 @@
                   android:layout_gravity="start"
                   android:layout_marginStart="24dp"
                   android:text="@string/tip_hint"
+                  android:textColor="@color/black"
                   android:fontFamily="@font/quicksand_semibold"
                   android:textSize="@dimen/text_size_lg" />
 
@@ -140,8 +154,9 @@
                   android:layout_marginTop="24dp"
                   android:layout_marginStart="8dp"
                   android:lineSpacingExtra="@dimen/margin_8dp"
+                  android:textColor="@color/black"
                   android:fontFamily="@font/quicksand_regular"
-                  android:text="The lorem ipsum is a placeholder text used in publishing and graphic design. This filler text is a short paragraph that contains all the letters of the alphabet. The characters are spread out evenly so that the reader’s attention is focused on the layout of the text instead of its content." />
+                  android:text="@string/demo_content" />
 
           </androidx.cardview.widget.CardView>
 
@@ -189,7 +204,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_4dp"
-            android:paddingHorizontal="@dimen/margin_16"
             android:paddingVertical="@dimen/margin_16"
             android:scrollbars="none"
             app:layout_goneMarginTop="@dimen/margin_24dp" />

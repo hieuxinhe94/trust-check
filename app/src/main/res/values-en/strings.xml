@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Trust Check</string>
+    <string name="app_name">TrustCheck</string>
 
     <string name="understand">I understand</string>
     <string name="app_intro_skip_button">SKIP</string>
@@ -81,7 +81,7 @@
     <string name="find_image">Pick image</string>
     <string name="suggest">Tips</string>
     <string name="near_warning">New scams</string>
-    <string name="detail">More detail</string>
+    <string name="detail">More</string>
     <string name="custom">Customize</string>
     <string name="complete">Done</string>
     <string name="received_new_warning">Subcribe new scam warning</string>
@@ -110,5 +110,8 @@
     <string name="warning_scam_app" translatable="false">Warning scam applications</string>
     <string name="message_ads">message ads</string>
     <string name="warning_settings">"scam app warning "</string>
+    <string name="search_hint">" Phone number, message, name..."</string>
+    <string name="attack_file">Attack images?</string>
+    <string name="tip_hint">Tip:</string>
 
 </resources>

@@ -81,7 +81,7 @@
     <string name="find_image">Tìm ảnh</string>
     <string name="suggest">Gợi ý</string>
     <string name="near_warning">Cảnh báo gần đầy</string>
-    <string name="detail">Chi tiết</string>
+    <string name="detail">Xem thêm</string>
     <string name="custom">Tuỳ chỉnh</string>
     <string name="complete">Hoàn tất</string>
     <string name="received_new_warning">Nhận cảnh báo nội dung mới</string>
@@ -108,7 +108,7 @@
     <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
     <string name="report_new_item">Báo cáo</string>
     <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
-    <string name="search_hint"> Số điện thoại, Tin nhắn, Tên, Đường Link... ..</string>
+    <string name="search_hint"> Tìm số điện thoại, tin nhắn, tên, link... ..</string>
     <string name="attack_file">Kèm ảnh?</string>
     <string name="tip_hint">Gợi ý</string>
 
