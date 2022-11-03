@@ -28,13 +28,17 @@ class MultiLanguageScreen : AppCompatActivity(), View.OnClickListener {
         when (v?.id) {
             R.id.edt_en -> {
                 edt_en.setBackgroundColor(getColor(R.color.main_color))
+                edt_en.setBackgroundResource(R.drawable.border_main_color)
                 edt_vi.setBackgroundColor(getColor(R.color.white))
+                edt_vi.setBackgroundResource(R.drawable.border_white)
                 color_index = 1
                 LocaleHelper.setLocale(this, "en")
             }
             R.id.edt_vi -> {
                 edt_vi.setBackgroundColor(getColor(R.color.main_color))
+                edt_vi.setBackgroundResource(R.drawable.border_main_color)
                 edt_en.setBackgroundColor(getColor(R.color.white))
+                edt_en.setBackgroundResource(R.drawable.border_white)
                 color_index = 2
                 LocaleHelper.setLocale(this, "vi")
             }

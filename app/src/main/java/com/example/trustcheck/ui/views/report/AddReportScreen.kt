@@ -26,7 +26,7 @@ class AddReportScreen : AppCompatActivity(), View.OnClickListener {
 
     private fun initView() {
         recyclerView = findViewById(R.id.recycler_view)
-        top_bar_news.setOnClickListener(this)
+        //top_bar_news.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {

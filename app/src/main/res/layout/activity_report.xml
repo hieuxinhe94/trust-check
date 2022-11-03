@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_bg"
     tools:context=".ui.views.report.ReportActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -50,7 +51,7 @@
             android:layout_marginTop="20dp"
             android:text="+84967356524"
             android:textColor="@color/main_color"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_lg" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -61,21 +62,23 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="@string/report_scam"
-                android:textColor="@color/textSecondary"
-                android:textSize="18dp" />
+                android:textColor="@color/black"
+                android:fontFamily="@font/quicksand_semibold"
+                android:textSize="@dimen/text_size_lg" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/border"
                 android:gravity="center_vertical"
+
                 android:paddingHorizontal="30dp"
-                android:paddingVertical="10dp"
-                android:text="Rất lớn"
+                android:paddingVertical="4dp"
+                android:text="Cao"
                 android:textColor="@color/textSecondary"
-                android:textSize="18dp" />
+                android:textSize="@dimen/text_size_lg" />
         </RelativeLayout>
 
         <LinearLayout
@@ -96,7 +99,7 @@
                         android:id="@+id/circularProgressbar1"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_height="125dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
                         android:max="100"
@@ -107,7 +110,7 @@
                     <TextView
                         android:id="@+id/tv"
                         android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_height="125dp"
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:text="25%"
@@ -123,8 +126,9 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="Quảng cáo"
-                    android:textColor="@color/text_shadow"
-                    android:textSize="14sp" />
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="@dimen/text_size_sm" />
             </LinearLayout>
 
             <LinearLayout
@@ -140,7 +144,7 @@
                         android:id="@+id/circularProgressbar2"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_height="125dp"
                         android:layout_centerInParent="true"
                         android:indeterminate="false"
                         android:max="100"
@@ -151,7 +155,7 @@
                     <TextView
                         android:id="@+id/tv1"
                         android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_height="125dp"
                         android:gravity="center"
                         android:text="25%"
                         android:textColor="@color/black"
@@ -163,9 +167,10 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:textColor="@color/black"
                     android:text="Tự động"
-                    android:textColor="@color/text_shadow"
-                    android:textSize="14sp" />
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="@dimen/text_size_sm" />
             </LinearLayout>
         </LinearLayout>
 
@@ -176,10 +181,11 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:drawableStart="@drawable/ic_idea"
+            android:layout_marginTop="15dp"
             android:padding="@dimen/dp_3dp"
-            android:text="Kết quả không chính xác"
-            android:textColor="@color/text_color"
-            android:textSize="14sp" />
+            android:text="Kết quả phản ánh không chính xác?"
+            android:textColor="@color/text_shadow"
+            android:textSize="@dimen/text_size_lg" />
 
         <TextView
             android:layout_width="match_parent"
@@ -188,32 +194,36 @@
             android:gravity="end"
             android:padding="@dimen/dp_3dp"
             android:text="Hoạt động gần đây"
-            android:textColor="@color/text_color"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_semibold"
             android:textSize="14sp" />
 
         <com.yabu.livechart.view.LiveChart
             android:id="@+id/live_chart"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             app:baselineColor="@color/color_bg"
             app:baselineDashGap="8dp"
             app:baselineStrokeWidth="4dp"
-            app:labelTextColor="@color/main_color"
+            app:labelTextColor="@color/black"
             app:labelTextHeight="14sp"
             app:overlayCircleColor="@color/color_bg_search"
-            app:overlayCircleDiameter="8dp"
+            app:overlayCircleDiameter="2dp"
             app:overlayLineColor="@color/color_error"
-            app:pathColor="@color/color_primary"
-            app:pathStrokeWidth="4dp" />
+            app:pathColor="@color/color_background_1"
+            app:pathStrokeWidth="2dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
-            android:text="Phản ánh gần đây"
-            android:textColor="@color/text_color"
-            android:textSize="14sp" />
+            android:layout_marginTop="25dp"
+            android:text="Phản ánh mới ghi nhận"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textSize="@dimen/text_size_lg"
+            />
 
         <View
             android:layout_width="70dp"
@@ -226,8 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_4dp"
-            android:paddingHorizontal="@dimen/margin_16"
-            android:paddingVertical="@dimen/margin_16"
+            android:paddingVertical="12dp"
             android:scrollbars="none"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4"

@@ -31,6 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textColor="@color/black"
                 android:text="@string/custom"
                 android:textAppearance="?attr/textAppearanceHeadline6" />
         </com.google.android.material.appbar.MaterialToolbar>
@@ -52,46 +53,48 @@
             android:layout_marginTop="16dp"
             android:text="@string/received_news"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/text_size_lg"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textStyle="normal" />
 
         <TableLayout
             android:id="@+id/tab_receive_ad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_8dp"
+            android:background="@drawable/row_conner"
             android:stretchColumns="*"
             app:layout_constraintTop_toBottomOf="@+id/txt_receive_new_infor"> <!-- stretch the second column of the layout-->
 
             <TableRow
-
+                android:background="@drawable/row_conner"
                 android:id="@+id/firstRow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <!-- first element of the row-->
+
                 <TextView
                     android:id="@+id/text_yes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_white"
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Có"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="12dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
                 <TextView
-
                     android:id="@+id/txt_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_main_color"
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Không"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
             </TableRow>
         </TableLayout>
@@ -103,8 +106,9 @@
             android:layout_marginTop="16dp"
             android:text="@string/call_invite"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textSize="@dimen/text_size_lg"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tab_receive_ad" />
 
@@ -118,7 +122,7 @@
 
             <!-- first row of the table layout-->
             <TableRow
-
+                android:background="@drawable/row_conner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -128,35 +132,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_white"
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Tắt chuông"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="12dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
                 <TextView
-
                     android:id="@+id/txt_reject"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/border_white"
-                    android:padding="18dip"
-                    android:text="Từ chối"
-                    android:textAlignment="center"
-                    android:textColor="#000"
-                    android:textSize="14dp" />
-
-                <TextView
-
-                    android:id="@+id/txt_block"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/border_main_color"
-                    android:padding="18dip"
-                    android:text="Chặn"
+                    android:padding="@dimen/dip_15"
+                    android:text="    Từ chối    "
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
             </TableRow>
         </TableLayout>
@@ -169,8 +160,9 @@
             android:layout_marginTop="16dp"
             android:text="@string/message_ads"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textSize="@dimen/text_size_lg"
+            android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tab_call_ad" />
 
@@ -184,7 +176,7 @@
 
             <!-- first row of the table layout-->
             <TableRow
-
+                android:background="@drawable/row_conner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -195,11 +187,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_white"
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Tắt chuông"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="12dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
                 <TextView
 
@@ -207,12 +199,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_main_color"
-
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Tự động xoá"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
 
             </TableRow>
@@ -223,10 +214,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/message_ads"
+            android:text="Quét ứng dụng lừa đảo"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textSize="@dimen/text_size_lg"
+            android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tab_sms_ad" />
 
@@ -240,7 +232,7 @@
 
             <!-- first row of the table layout-->
             <TableRow
-
+                android:background="@drawable/row_conner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -251,24 +243,22 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_white"
 
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Có"
                     android:textAlignment="center"
                     android:textColor="#000"
-                    android:textSize="12dp" />
+                    android:textSize="@dimen/text_size_sm" />
 
                 <TextView
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/border_main_color"
-                    android:padding="18dip"
+                    android:padding="@dimen/dip_15"
                     android:text="Không"
                     android:textAlignment="center"
                     android:textColor="#000"
-
-                    android:textSize="14dp" />
-
+                    android:textSize="@dimen/text_size_sm" />
 
             </TableRow>
         </TableLayout>
@@ -283,7 +273,8 @@
             android:padding="@dimen/margin_16"
             android:text="@string/upgrade"
             android:textColor="@color/main_color"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_sm"
+            android:fontFamily="@font/quicksand_semibold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tab_warning" />
     </LinearLayout>

@@ -80,7 +80,7 @@
     <string name="phone_message">Phone calls, messages</string>
     <string name="find_image">Pick image</string>
     <string name="suggest">Tips</string>
-    <string name="near_warning">New scams</string>
+    <string name="near_warning">Warning level:</string>
     <string name="detail">More</string>
     <string name="custom">Customize</string>
     <string name="complete">Done</string>
@@ -101,13 +101,13 @@
     <string name="update_package">Upgrade to Premium</string>
     <string name="donate">Feedback</string>
     <string name="result_for_find">Search result</string>
-    <string name="report_scam">Scam warning</string>
+    <string name="report_scam">Recent warnings</string>
     <string name="report">Warning</string>
     <string name="report_new">Report new case</string>
     <string name="news">News</string>
     <string name="received_news">Subcribe new warning cases</string>
     <string name="call_invite">Marketing automate call</string>
-    <string name="warning_scam_app" translatable="false">Warning scam applications</string>
+    <string name="warning_scam_app" translatable="false">"Warning scam applications "</string>
     <string name="message_ads">message ads</string>
     <string name="warning_settings">"scam app warning "</string>
     <string name="search_hint">" Phone number, message, name..."</string>

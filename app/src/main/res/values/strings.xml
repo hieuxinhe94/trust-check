@@ -80,10 +80,10 @@
     <string name="phone_message">Số điện thoại, tin nhắn</string>
     <string name="find_image">Tìm ảnh</string>
     <string name="suggest">Gợi ý</string>
-    <string name="near_warning">Cảnh báo gần đầy</string>
+    <string name="near_warning">Cấp độ cảnh báo</string>
     <string name="detail">Xem thêm</string>
     <string name="custom">Tuỳ chỉnh</string>
-    <string name="complete">Hoàn tất</string>
+    <string name="complete">Lưu lại</string>
     <string name="received_new_warning">Nhận cảnh báo nội dung mới</string>
     <string name="ad_call_auto">Cuộc gọi quảng cáo, tự động</string>
     <string name="ad_message">Tin nhắn quảng cáo</string>
@@ -98,7 +98,7 @@
     <string name="update_package">Nâng cấp gói</string>
     <string name="donate">Ủng hộ, góp ý kiến</string>
     <string name="result_for_find">Kết quả tìm kiếm</string>
-    <string name="report_scam">Cảnh báo lừa đảo</string>
+    <string name="report_scam">Cảnh báo nguy cơ:</string>
     <string name="report">Cảnh báo</string>
     <string name="report_new">Báo cáo TH mới</string>
     <string name="news">Tin tức</string>
@@ -111,5 +111,11 @@
     <string name="search_hint"> Tìm số điện thoại, tin nhắn, tên, link... ..</string>
     <string name="attack_file">Kèm ảnh?</string>
     <string name="tip_hint">Gợi ý</string>
+    <string name="pick_scam_category_lbl">Chọn 1 hoặc nhiều phân loại</string>
+    <string name="scam_method_lbl">Phương thức</string>
+    <string name="scam_title_lbl">Phân loại</string>
+    <string name="scam_new_unique_placeholder">Nhập số điện thoại, tin nhắn, tên, link..</string>
+    <string name="scam_new_title_lbl">Tiêu đề cảnh báo</string>
+    <string name="scam_method_detail_hint">Phương thức thực hiện</string>
 
 </resources>

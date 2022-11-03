@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Trust Check</string>
+    <string name="app_name">TrustCheck</string>
     <string name="understand">Tôi hiểu</string>
     <string name="app_intro_skip_button">Bỏ qua</string>
     <string name="app_intro_next_button">Tiếp theo</string>
@@ -79,7 +79,7 @@
     <string name="phone_message">Số điện thoại, tin nhắn</string>
     <string name="find_image">Tìm ảnh</string>
     <string name="suggest">Gợi ý</string>
-    <string name="near_warning">Cảnh báo gần đầy</string>
+    <string name="near_warning">Cấp độ cảnh báo</string>
     <string name="detail">Xem thêm</string>
     <string name="custom">Tuỳ chỉnh</string>
     <string name="complete">Hoàn tất</string>
@@ -98,7 +98,7 @@
     <string name="update_package">Ủng hộ nhà phát triển</string>
     <string name="donate">Góp ý kiến</string>
     <string name="result_for_find">Kế quả tìm kiếm</string>
-    <string name="report_scam">Cảnh báo lừa đảo</string>
+    <string name="report_scam">Cảnh báo gần đây</string>
     <string name="report">Cảnh báo</string>
 
     <string name="report_new_item">Báo cáo</string>

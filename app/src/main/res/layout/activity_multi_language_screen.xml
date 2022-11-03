@@ -34,6 +34,7 @@
                 android:gravity="center"
                 android:text="@string/language"
                 android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"
                 android:textAppearance="?attr/textAppearanceHeadline6" />
         </com.google.android.material.appbar.MaterialToolbar>
 
