@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg"
+    android:background="@color/white"
     tools:context=".ui.views.menu.MenuActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/report_new"
-            android:fontFamily="@font/quicksand_bold"
+            android:fontFamily="@font/quicksand_semibold"
             android:textColor="@color/text_color"
             android:textSize="@dimen/text_size_lg" />
 
@@ -69,7 +69,7 @@
             android:layout_marginTop="20dp"
             android:text="@string/custom_app"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
+            android:fontFamily="@font/quicksand_semibold"
             android:textSize="@dimen/text_size_lg" />
 
         <View
@@ -101,7 +101,7 @@
             android:layout_marginTop="20dp"
             android:text="@string/language"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
+            android:fontFamily="@font/quicksand_semibold"
             android:textSize="@dimen/text_size_lg" />
 
         <View
@@ -118,7 +118,7 @@
             android:layout_marginTop="20dp"
             android:text="@string/donate"
             android:textColor="@color/text_color"
-            android:fontFamily="@font/quicksand_bold"
+            android:fontFamily="@font/quicksand_semibold"
             android:textSize="@dimen/text_size_lg" />
     </LinearLayout>
 

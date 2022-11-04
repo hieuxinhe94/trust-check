@@ -157,16 +157,12 @@ class HomeActivity : AppCompatActivity() {
         recyclerView?.layoutManager = LinearLayoutManager(this)
 
         val listWarning: MutableList<RecentWarning> = ArrayList()
-        val w1 = RecentWarning("ứng dụng lừa đảo")
-        val w2 = RecentWarning("ứng dụng scam")
-        val w3 = RecentWarning("ứng dụng vớ vẩn")
-        val w4 = RecentWarning("ứng dụng gây hại")
-        val w5 = RecentWarning("ứng dụng nghe lén")
+        val w1 = RecentWarning("09676769696","Gọi điện lừa đảo")
+        val w2 = RecentWarning("01234567892", "Lừa đảo mua bất động sản")
+        val w3 = RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo");
         listWarning.add(w1)
         listWarning.add(w2)
         listWarning.add(w3)
-        listWarning.add(w4)
-        listWarning.add(w5)
         warningAdapter = WarningAdapter(listWarning)
         recyclerView?.addItemDecoration(
             DividerItemDecoration(

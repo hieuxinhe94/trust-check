@@ -1,5 +1,6 @@
 package com.example.trustcheck.data.models
 
 data class RecentWarning(
-    val name: String
+    val name: String,
+    val shortDescription: String
 )

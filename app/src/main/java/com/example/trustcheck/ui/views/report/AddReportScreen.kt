@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trustcheck.R
 import com.example.trustcheck.data.models.RecentWarning
+import com.example.trustcheck.ui.adapter.AddReportAdapter
 import com.example.trustcheck.ui.adapter.WarningAdapter
 import kotlinx.android.synthetic.main.activity_add_report_screen.*
 import kotlinx.android.synthetic.main.activity_news_screen.*
@@ -15,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_news_screen.*
 class AddReportScreen : AppCompatActivity(), View.OnClickListener {
 
     private var recyclerView: RecyclerView? = null
-    private var warningAdapter: WarningAdapter? = null
+    private var warningAdapter: AddReportAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,17 +43,15 @@ class AddReportScreen : AppCompatActivity(), View.OnClickListener {
         recyclerView?.layoutManager = LinearLayoutManager(this)
 
         val listWarning: MutableList<RecentWarning> = ArrayList()
-        val w1 = RecentWarning("ứng dụng lừa đảo")
-        val w2 = RecentWarning("ứng dụng scam")
-        val w3 = RecentWarning("ứng dụng vớ vẩn")
-        val w4 = RecentWarning("ứng dụng gây hại")
-        val w5 = RecentWarning("ứng dụng nghe lén")
+        val w1 = RecentWarning("","Lừa đảo")
+        val w2 = RecentWarning("","Làm phiền, quấy rối")
+        val w3 = RecentWarning("","Quảng cáo")
+        val w4 = RecentWarning("","Tự động - bot")
         listWarning.add(w1)
         listWarning.add(w2)
         listWarning.add(w3)
         listWarning.add(w4)
-        listWarning.add(w5)
-        warningAdapter = WarningAdapter(listWarning)
+        warningAdapter = AddReportAdapter(listWarning)
         recyclerView?.addItemDecoration(
             DividerItemDecoration(
                 this,

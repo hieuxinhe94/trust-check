@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_bg"
+    android:background="@color/white"
     tools:context=".ui.views.home.HomeActivity">
 
     <TextView
         android:id="@+id/home_logo_text"
         android:layout_width="wrap_content"
-        android:layout_height="24dp"
+        android:layout_height="28dp"
         android:text="@string/app_name"
         android:fontFamily="@font/quicksand_bold"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/color_text_purple_1"
         android:layout_marginTop="24dp"
@@ -23,9 +23,9 @@
 
     <ImageView
         android:id="@+id/setting_icon"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -40,7 +40,7 @@
         android:layout_marginTop="2dp"
         android:text="@string/slogan"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="@dimen/text_size_sm"
         android:textStyle="normal"
         android:fontFamily="@font/quicksand_regular"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +118,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
-
+            android:paddingTop="15dp"
             app:layout_constraintStart_toStartOf="@+id/recycler_view"
             app:layout_constraintTop_toBottomOf="@+id/recycler_view">
 
@@ -135,7 +135,7 @@
                   android:layout_width="@dimen/margin_24dp"
                   android:layout_height="@dimen/margin_24dp"
                   android:padding="@dimen/dp_3dp"
-
+                  android:layout_marginStart="@dimen/dp_3dp"
                   android:layout_marginTop="@dimen/dp_3dp"
                   android:tooltipText="@string/tip_hint"
                   app:srcCompat="@drawable/ic_idea" />
@@ -149,16 +149,17 @@
                   android:text="@string/tip_hint"
                   android:textColor="@color/black"
                   android:fontFamily="@font/quicksand_semibold"
-                  android:textSize="@dimen/text_size_lg" />
+                  android:textSize="@dimen/text_size_sm" />
 
               <TextView
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:layout_marginTop="24dp"
+                  android:layout_marginTop="28dp"
                   android:layout_marginStart="8dp"
                   android:lineSpacingExtra="@dimen/margin_8dp"
+                  android:textSize="@dimen/text_size_sm"
                   android:textColor="@color/black"
-                  android:fontFamily="@font/quicksand_regular"
+                  android:fontFamily="@font/quicksand_medium"
                   android:text="@string/demo_content" />
 
           </androidx.cardview.widget.CardView>
@@ -170,7 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             app:layout_constraintStart_toStartOf="@+id/recycler_view"
             app:layout_constraintTop_toBottomOf="@+id/recycler_view">
 
@@ -207,7 +208,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_4dp"
-            android:paddingVertical="@dimen/margin_16"
+
             android:scrollbars="none"
             app:layout_goneMarginTop="@dimen/margin_24dp" />
     </LinearLayout>

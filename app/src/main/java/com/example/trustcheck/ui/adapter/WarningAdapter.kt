@@ -28,13 +28,16 @@ class WarningAdapter(private val listItem: List<RecentWarning>) :
 
     class WarningAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textTitle: TextView
+        private val textShortDescription: TextView
 
         init {
             textTitle = itemView.findViewById(R.id.textTitle)
+            textShortDescription = itemView.findViewById(R.id.textShortDescription)
         }
 
         fun setDataView(recentWarning: RecentWarning) {
             textTitle.text = recentWarning.name
+            textShortDescription.text = recentWarning.shortDescription
         }
     }
 

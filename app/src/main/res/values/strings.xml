@@ -91,7 +91,7 @@
     <string name="support_developer">Hỗ trợ nhà phát triển bằng cách mua gói nâng cao</string>
     <string name="language">Ngôn ngữ</string>
     <string name="choose_language">Chọn ngôn ngữ</string>
-    <string name="warning_scam">Cảnh báo lừa đảo mới</string>
+    <string name="warning_scam">Cảnh báo gần đây</string>
     <string name="very_big">rất lớn</string>
     <string name="menu">Menu</string>
     <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
@@ -111,11 +111,12 @@
     <string name="search_hint"> Tìm số điện thoại, tin nhắn, tên, link... ..</string>
     <string name="attack_file">Kèm ảnh?</string>
     <string name="tip_hint">Gợi ý</string>
-    <string name="pick_scam_category_lbl">Chọn 1 hoặc nhiều phân loại</string>
+    <string name="pick_scam_category_lbl">Chọn 1 hoặc nhiều phân loại *</string>
     <string name="scam_method_lbl">Phương thức</string>
-    <string name="scam_title_lbl">Phân loại</string>
+    <string name="scam_title_lbl">Nội dung</string>
     <string name="scam_new_unique_placeholder">Nhập số điện thoại, tin nhắn, tên, link..</string>
-    <string name="scam_new_title_lbl">Tiêu đề cảnh báo</string>
+    <string name="scam_new_title_lbl">Phương thức đối tượng thực hiện</string>
     <string name="scam_method_detail_hint">Phương thức thực hiện</string>
+    <string name="scam_new_objective_lbl">Nhập đối tượng *</string>
 
 </resources>

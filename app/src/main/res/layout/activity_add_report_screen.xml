@@ -49,12 +49,12 @@
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nhập đối tượng"
+            android:text="@string/scam_new_objective_lbl"
             android:layout_centerInParent="true"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_lg" />
 
         <View
             android:layout_marginTop="@dimen/dp_3dp"
@@ -66,11 +66,12 @@
             android:id="@+id/edtSearch"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="18dp"
             android:background="@drawable/edit_bg"
             android:hint="@string/scam_new_unique_placeholder"
             android:inputType="text"
             android:textColor="@color/white"
+            android:textStyle="italic"
             android:padding="10dp"
             android:textCursorDrawable="@color/blackNavy"
             android:textColorHint="@color/textSecondary"
@@ -108,14 +109,15 @@
 
         <TextView
             android:layout_marginTop="10dp"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/scam_title_lbl"
             android:layout_centerInParent="true"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_lg" />
 
         <View
             android:layout_marginTop="@dimen/dp_3dp"
@@ -125,11 +127,12 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginTop="@dimen/margin_8dp"
             android:background="@drawable/edit_bg"
             android:hint="@string/scam_new_title_lbl"
             android:textColorHint="@color/textSecondary"
+            android:textStyle="italic"
             android:inputType="text"
             android:padding="10dp"
             android:textColor="@color/white"
@@ -138,38 +141,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scam_method_lbl"
-            android:layout_centerInParent="true"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+<!--        <TextView-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/scam_method_lbl"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:textColor="@color/textSecondary"-->
+<!--            android:textSize="16sp" />-->
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_100"
-            android:layout_marginTop="@dimen/margin_8dp"
-            android:background="@drawable/edit_bg"
-            android:hint="@string/scam_method_detail_hint"
-            android:textColorHint="@color/textSecondary"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textCursorDrawable="@color/blackNavy" />
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_100"-->
+<!--            android:layout_marginTop="@dimen/margin_8dp"-->
+<!--            android:background="@drawable/edit_bg"-->
+<!--            android:hint="@string/scam_method_detail_hint"-->
+<!--            android:textColorHint="@color/white"-->
+<!--            android:inputType="text"-->
+<!--            android:padding="10dp"-->
+<!--            android:textCursorDrawable="@color/blackNavy" />-->
 
         <TextView
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="28dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pick_scam_category_lbl"
             android:layout_centerInParent="true"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/textSecondary"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_lg" />
 
         <View
             android:layout_marginTop="@dimen/dp_3dp"

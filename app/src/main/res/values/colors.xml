@@ -26,7 +26,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="indicatiorInactive">#80C3F8</color>
     <color name="indicatioractive">#0581E5</color>
-    <color name="textSecondary">#515151</color>
+    <color name="textSecondary">#ACACAC</color>
 
     <!-- colors for onboarding two-->
     <color name="activeIndicators">#39136d</color>
