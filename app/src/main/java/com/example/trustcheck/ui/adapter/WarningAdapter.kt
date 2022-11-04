@@ -33,13 +33,15 @@ class WarningAdapter(private val listItem: List<RecentWarning>) :
         init {
             textTitle = itemView.findViewById(R.id.textTitle)
             textShortDescription = itemView.findViewById(R.id.textShortDescription)
+
         }
 
         fun setDataView(recentWarning: RecentWarning) {
             textTitle.text = recentWarning.name
             textShortDescription.text = recentWarning.shortDescription
+
         }
+
+
     }
-
-
 }

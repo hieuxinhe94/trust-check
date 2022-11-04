@@ -5,9 +5,9 @@
     <string name="app_intro_skip_button">Bỏ qua</string>
     <string name="app_intro_next_button">Tiếp theo</string>
     <string name="app_intro_back_button">Quay lại</string>
-    <string name="app_intro_done_button">Xong</string>
+    <string name="app_intro_done_button">Lưu</string>
 
-    <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="demo_content">Gần đây có một số đối tượng lừa đảo nhắn tin lừa đảo ngân hàng bằng chính brandname....</string>
     <string name="demo_title">Lorem Ipsum</string>
     <string name="example_1">Example 1</string>
     <string name="walkthrough">Examples of <b> walkthrough/onboarding/first-time users </b> screen in android studio</string>
@@ -74,7 +74,7 @@
     <string name="commitment">Chúng tôi cam kết không lưu trữ thông tin liên hệ và tin nhăn của bạn</string>
     <string name="ignore">Bỏ qua</string>
     <string name="got_it">Đã hiểu</string>
-    <string name="get_started">Hoàn thành</string>
+    <string name="get_started">Lưu</string>
     <string name="next">Tiếp theo</string>
     <string name="phone_message">Số điện thoại, tin nhắn</string>
     <string name="find_image">Tìm ảnh</string>
@@ -82,7 +82,7 @@
     <string name="near_warning">Cấp độ cảnh báo</string>
     <string name="detail">Xem thêm</string>
     <string name="custom">Tuỳ chỉnh</string>
-    <string name="complete">Hoàn tất</string>
+    <string name="complete">Lưu</string>
     <string name="received_new_warning">Nhận cảnh báo nội dung mới</string>
     <string name="ad_call_auto">Cuộc gọi quảng cáo, tự động</string>
     <string name="ad_message">Tin nhắn quảng cáo</string>
@@ -90,11 +90,11 @@
     <string name="support_developer">Hỗ trợ nhà phát triển bằng cách mua gói nâng cao</string>
     <string name="language">Ngôn ngữ</string>
     <string name="choose_language">Chọn ngôn ngữ</string>
-    <string name="warning_scam">Cảnh báo lừa đảo</string>
+    <string name="warning_scam">Cảnh báo gần đây</string>
     <string name="very_big">rất lớn</string>
     <string name="slogan">Chặn làm phiền, chống lừa đảo</string>
     <string name="report_new">Báo cáo trường hợp mới</string>
-    <string name="custom_app">Tuỳ chỉnh ứng dụng</string>
+    <string name="custom_app">"Tuỳ chỉnh "</string>
     <string name="update_package">Ủng hộ nhà phát triển</string>
     <string name="donate">Góp ý kiến</string>
     <string name="result_for_find">Kế quả tìm kiếm</string>
@@ -109,8 +109,15 @@
     <string name="warning_scam_app" translatable="false">Cảnh báo ứng dụng lừa đảo bạn đã cài</string>
     <string name="warning_settings">Cảnh báo ứng dụng nguy hiểm đã cài đặt</string>
     <string name="message_ads">Tin nhắn quảng cáo</string>
-    <string name="search_hint">" Số điện thoại, Tin nhắn, Tên, Đường Link... .."</string>
+    <string name="search_hint">Tìm số điện thoại, tin nhắn, tên...</string>
     <string name="attack_file">Kèm ảnh?</string>
     <string name="tip_hint">Gợi ý:</string>
+    <string name="pick_scam_category_lbl">Chọn 1 hoặc nhiều phân loại *</string>
+    <string name="scam_method_lbl">Phương thức</string>
+    <string name="scam_title_lbl">Nội dung</string>
+    <string name="scam_new_unique_placeholder">Nhập số điện thoại, tin nhắn, tên, link..</string>
+    <string name="scam_new_title_lbl">Phương thức đối tượng thực hiện</string>
+    <string name="scam_method_detail_hint">Phương thức thực hiện</string>
+    <string name="scam_new_objective_lbl">Nhập đối tượng *</string>
 
 </resources>

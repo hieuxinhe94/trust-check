@@ -72,17 +72,16 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
             android:background="@drawable/edit_bg"
             android:drawableStart="@drawable/ic_search"
             android:fontFamily="@font/quicksand_regular"
             android:hint="@string/search_hint"
-            android:textSize="@dimen/text_size_lg"
             android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            />
+            android:textSize="@dimen/text_size_lg" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -193,7 +192,7 @@
             android:text="@string/warning_scam"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_lg"
-            android:fontFamily="@font/quicksand_semibold"
+            android:fontFamily="@font/quicksand_medium"
             app:layout_constraintStart_toStartOf="@+id/edtSearch"
             app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
 

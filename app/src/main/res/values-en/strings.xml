@@ -8,7 +8,7 @@
     <string name="app_intro_back_button">BACK</string>
     <string name="app_intro_done_button">DONE</string>
 
-    <string name="demo_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="demo_content">You can search for an application name that you doubt</string>
     <string name="demo_title">Lorem Ipsum</string>
     <string name="example_1">Example 1</string>
     <string name="walkthrough">Examples of <b> walkthrough/onboarding/first-time users </b> screen in android studio</string>
@@ -72,19 +72,19 @@
     <string name="block_call">" Block scam and spam callers"</string>
     <string name="block_message">" Block scam and spam messages"</string>
     <string name="warning_new_prototype">" New scams warning"</string>
-    <string name="commitment">" New scams warning"</string>
+    <string name="commitment">We do not upload any your contact data. Ours logic ony process in offline</string>
     <string name="ignore">Skip</string>
     <string name="got_it">Understood</string>
     <string name="get_started">Done</string>
     <string name="next">Next</string>
     <string name="phone_message">Phone calls, messages</string>
-    <string name="find_image">Pick image</string>
+    <string name="find_image">Pick images</string>
     <string name="suggest">Tips</string>
     <string name="near_warning">Warning level:</string>
     <string name="detail">More</string>
     <string name="custom">Customize</string>
     <string name="complete">Done</string>
-    <string name="received_new_warning">Subcribe new scam warning</string>
+    <string name="received_new_warning">Subcribe news</string>
     <string name="ad_call_auto">Auto-call marketing</string>
     <string name="ad_message">Auto-msg marketing</string>
     <string name="upgrade">Please upgrade your subscription to use advanced features Starter .../tháng</string>
@@ -95,7 +95,7 @@
     <string name="very_big">High</string>
     <string name="slogan">Scam and Spam Blocker</string>
 
-    <string name="report_new_item">Báo cáo</string>
+    <string name="report_new_item">Report</string>
     <string name="menu">Menu</string>
     <string name="custom_app">Settings</string>
     <string name="update_package">Upgrade to Premium</string>
@@ -107,11 +107,18 @@
     <string name="news">News</string>
     <string name="received_news">Subcribe new warning cases</string>
     <string name="call_invite">Marketing automate call</string>
-    <string name="warning_scam_app" translatable="false">"Warning scam applications "</string>
-    <string name="message_ads">message ads</string>
-    <string name="warning_settings">"scam app warning "</string>
-    <string name="search_hint">" Phone number, message, name..."</string>
+    <string name="warning_scam_app" translatable="false">"Scan scam applications "</string>
+    <string name="message_ads">Message ads</string>
+    <string name="warning_settings">"Scam app warning "</string>
+    <string name="search_hint">Search phone number, message, name...</string>
     <string name="attack_file">Attack images?</string>
     <string name="tip_hint">Tip:</string>
+    <string name="pick_scam_category_lbl">Select one or mutiple options *</string>
+    <string name="scam_method_lbl">Method</string>
+    <string name="scam_title_lbl">Content</string>
+    <string name="scam_new_unique_placeholder">Phone number, message or name...</string>
+    <string name="scam_new_title_lbl">Scam/Spam method</string>
+    <string name="scam_method_detail_hint">Method</string>
+    <string name="scam_new_objective_lbl">Enter object *</string>
 
 </resources>

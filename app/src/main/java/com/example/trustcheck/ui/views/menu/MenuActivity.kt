@@ -42,7 +42,7 @@ class MenuActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(Intent(this, MultiLanguageScreen::class.java))
             }
             R.id.id_donate -> {
-                startActivity(Intent(this, NewsScreen::class.java))
+
 
             }
             R.id.top_bar_menu ->{
