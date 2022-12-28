@@ -98,7 +98,7 @@
     <string name="update_package">Ủng hộ nhà phát triển</string>
     <string name="donate">Góp ý kiến</string>
     <string name="result_for_find">Kế quả tìm kiếm</string>
-    <string name="report_scam">Cảnh báo gần đây</string>
+    <string name="report_scam">Cấp độ cảnh báo:</string>
     <string name="report">Cảnh báo</string>
 
     <string name="report_new_item">Báo cáo</string>
@@ -119,5 +119,9 @@
     <string name="scam_new_title_lbl">Phương thức đối tượng thực hiện</string>
     <string name="scam_method_detail_hint">Phương thức thực hiện</string>
     <string name="scam_new_objective_lbl">Nhập đối tượng *</string>
+    <string name="scan_app_lbl">Quét ứng dụng lừa đảo</string>
+    <string name="recent_report_lbl">Phản ánh gần đây:</string>
+    <string name="recent_active_lbl">Hoạt động gần đây</string>
+    <string name="not_exactly_lbl">Không chính xác?</string>
 
 </resources>

@@ -39,13 +39,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_yes_report.setTextColor(getColor(R.color.white));
                 txt_report_no.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
-
+                txt_report_no.setTextColor(getColor(R.color.black));
             }
             R.id.txt_report_no -> {
                 txt_report_no.setBackgroundDrawable(
@@ -54,12 +55,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_report_no.setTextColor(getColor(R.color.white));
                 txt_yes_report.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
+                txt_yes_report.setTextColor(getColor(R.color.black));
             }
             R.id.txt_off_alarm -> {
                 txt_off_alarm.setBackgroundDrawable(
@@ -68,13 +71,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_off_alarm.setTextColor(getColor(R.color.white));
                 txt_reject.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
-
+                txt_reject.setTextColor(getColor(R.color.black));
 
             }
             R.id.txt_reject -> {
@@ -84,17 +88,15 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_reject.setTextColor(getColor(R.color.white));
                 txt_off_alarm.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
-
-
+                txt_off_alarm.setTextColor(getColor(R.color.black));
             }
-
-
 
             R.id.txt_off_alarm_sms -> {
                 txt_off_alarm_sms.setBackgroundDrawable(
@@ -103,13 +105,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_off_alarm_sms.setTextColor(getColor(R.color.white));
                 txt_auto_delete.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
-
+                txt_auto_delete.setTextColor(getColor(R.color.black));
             }
 
             R.id.txt_auto_delete -> {
@@ -119,13 +122,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_auto_delete.setTextColor(getColor(R.color.white));
                 txt_off_alarm_sms.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
-
+                txt_off_alarm_sms.setTextColor(getColor(R.color.black));
             }
 
             R.id.txt_app_scan_yes -> {
@@ -135,12 +139,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_app_scan_yes.setTextColor(getColor(R.color.white));
                 txt_app_scan_no.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
+                txt_app_scan_no.setTextColor(getColor(R.color.black));
             }
 
             R.id.txt_app_scan_no -> {
@@ -150,13 +156,14 @@ class CustomActivity : AppCompatActivity(), View.OnClickListener {
                         R.drawable.border_main_color
                     )
                 )
+                txt_app_scan_no.setTextColor(getColor(R.color.white));
                 txt_app_scan_yes.setBackgroundDrawable(
                     ContextCompat.getDrawable(
                         this,
                         R.drawable.border_white
                     )
                 )
-
+                txt_app_scan_yes.setTextColor(getColor(R.color.black));
             }
 
 

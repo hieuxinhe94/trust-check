@@ -88,12 +88,12 @@
     <string name="ad_call_auto">Auto-call marketing</string>
     <string name="ad_message">Auto-msg marketing</string>
     <string name="upgrade">Please upgrade your subscription to use advanced features Starter .../tháng</string>
-    <string name="support_developer">Hỗ trợ nhà phát triển bằng cách mua gói nâng cao</string>
+    <string name="support_developer">Please upgrade your subscription to use advanced features Starter .../tháng</string>
     <string name="language">Languages</string>
     <string name="choose_language">Selelect a language</string>
     <string name="warning_scam">Scam warning</string>
     <string name="very_big">High</string>
-    <string name="slogan">Scam and Spam Blocker</string>
+    <string name="slogan">Scam &amp; Spam Blocker</string>
 
     <string name="report_new_item">Report</string>
     <string name="menu">Menu</string>
@@ -101,11 +101,11 @@
     <string name="update_package">Upgrade to Premium</string>
     <string name="donate">Feedback</string>
     <string name="result_for_find">Search result</string>
-    <string name="report_scam">Recent warnings</string>
+    <string name="report_scam">Warnings Level:</string>
     <string name="report">Warning</string>
     <string name="report_new">Report new case</string>
     <string name="news">News</string>
-    <string name="received_news">Subcribe new warning cases</string>
+    <string name="received_news">Subcribe news</string>
     <string name="call_invite">Marketing automate call</string>
     <string name="warning_scam_app" translatable="false">"Scan scam applications "</string>
     <string name="message_ads">Message ads</string>
@@ -115,10 +115,14 @@
     <string name="tip_hint">Tip:</string>
     <string name="pick_scam_category_lbl">Select one or mutiple options *</string>
     <string name="scam_method_lbl">Method</string>
-    <string name="scam_title_lbl">Content</string>
+    <string name="scam_title_lbl">Description</string>
     <string name="scam_new_unique_placeholder">Phone number, message or name...</string>
     <string name="scam_new_title_lbl">Scam/Spam method</string>
     <string name="scam_method_detail_hint">Method</string>
-    <string name="scam_new_objective_lbl">Enter object *</string>
+    <string name="scam_new_objective_lbl">Object *</string>
+    <string name="scan_app_lbl">Scam applicaton scan</string>
+    <string name="recent_report_lbl">Recent report</string>
+    <string name="recent_active_lbl">Last actived</string>
+    <string name="not_exactly_lbl">Not correct?</string>
 
 </resources>

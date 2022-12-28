@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:menu="@menu/language_menu"
-            android:background="@color/color_bg"
+            android:background="@color/white"
             app:itemTextColor="@color/main_color"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
 
@@ -83,7 +83,7 @@
         android:padding="@dimen/padding_5"
         android:text="@string/vi_language"
         android:fontFamily="@font/quicksand_semibold"
-        android:textColor="@color/text_color"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_size_lg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_en" />

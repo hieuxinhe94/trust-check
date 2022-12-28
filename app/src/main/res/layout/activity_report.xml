@@ -51,6 +51,7 @@
             android:layout_marginTop="20dp"
             android:text="+84967356524"
             android:textColor="@color/main_color"
+            android:fontFamily="@font/quicksand_medium"
             android:textSize="@dimen/text_size_lg" />
 
         <RelativeLayout
@@ -63,7 +64,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/report_scam"
                 android:textColor="@color/black"
-                android:fontFamily="@font/quicksand_semibold"
+                android:fontFamily="@font/quicksand_bold"
                 android:textSize="@dimen/text_size_lg" />
 
             <TextView
@@ -73,10 +74,10 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/border"
                 android:gravity="center_vertical"
-
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="4dp"
                 android:text="Cao"
+                android:fontFamily="@font/quicksand_bold"
                 android:textColor="@color/textSecondary"
                 android:textSize="@dimen/text_size_lg" />
         </RelativeLayout>
@@ -124,10 +125,10 @@
                     android:id="@+id/adds"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
                     android:gravity="center_horizontal"
                     android:text="Quảng cáo"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/quicksand_bold"
                     android:textSize="@dimen/text_size_sm" />
             </LinearLayout>
 
@@ -168,8 +169,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:textColor="@color/black"
-                    android:text="Tự động"
-                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Bot - Tự động"
+                    android:fontFamily="@font/quicksand_medium"
                     android:textSize="@dimen/text_size_sm" />
             </LinearLayout>
         </LinearLayout>
@@ -183,7 +184,7 @@
             android:drawableStart="@drawable/ic_idea"
             android:layout_marginTop="15dp"
             android:padding="@dimen/dp_3dp"
-            android:text="Kết quả phản ánh không chính xác?"
+            android:text="@string/not_exactly_lbl"
             android:textColor="@color/text_shadow"
             android:textSize="@dimen/text_size_lg" />
 
@@ -193,10 +194,11 @@
             android:layout_gravity="center_horizontal"
             android:gravity="end"
             android:padding="@dimen/dp_3dp"
-            android:text="Hoạt động gần đây"
+            android:layout_marginTop="25dp"
+            android:text="@string/recent_active_lbl"
             android:textColor="@color/black"
             android:fontFamily="@font/quicksand_semibold"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_size_sm" />
 
         <com.yabu.livechart.view.LiveChart
             android:id="@+id/live_chart"
@@ -219,7 +221,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="25dp"
-            android:text="Phản ánh mới ghi nhận"
+            android:text="@string/recent_report_lbl"
             android:textColor="@color/black"
             android:fontFamily="@font/quicksand_semibold"
             android:textSize="@dimen/text_size_lg"

@@ -34,6 +34,12 @@ import com.example.trustcheck.ui.Observer.BlacklistObserver;
 import com.example.trustcheck.ui.helper.DBHelper;
 import com.example.trustcheck.ui.utils.Common;
 import com.example.trustcheck.ui.views.home.HomeActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.lang.reflect.Method;
 
@@ -43,7 +49,7 @@ public class CallReceiver extends BroadcastReceiver {
 
     private static final int NOTIFY_REJECTED = 0;
     private static boolean AlreadyOnCall = false;
-
+    private boolean inBlackList = false;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -84,40 +90,60 @@ public class CallReceiver extends BroadcastReceiver {
                         rejectCall(context, new Number(incomingNumber), context.getString(R.string.receiver_notify_not_found_in_contacts));
                     }
                 } else {
-                    DBHelper dbHelper = new DBHelper(context);
+
                     try {
-                        SQLiteDatabase db = dbHelper.getWritableDatabase();
-                        Cursor c = db.query(DBHelper.TABLE_NAME_PHONE_DATA, null, "? LIKE " + DBHelper.ADDRESS_ID, new String[]{incomingNumber}, null, null, null);
-                        boolean inList = c.moveToNext();
-                        // block calls from the numbers stored in list
-                        if (inList && common.getCallBlockingMode() == BlockingModes.BLOCK_LIST) {
-                            Log.i(TAG, "Number was in list: " + incomingNumber);
-                            ContentValues values = new ContentValues();
-                            DatabaseUtils.cursorRowToContentValues(c, values);
-                            Number number = Number.fromValues(values);
+                        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-                            rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_in_list));
-                            BlacklistObserver.notifyUpdated();
+                        db.collection("phoneData_VN").document(incomingNumber)
+                                .get()
+                                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                        if (task.isSuccessful()) {
+                                            DocumentSnapshot document = task.getResult();
+                                            if (document.exists()) {
+                                                Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                                                inBlackList = true;
+                                            } else {
+                                                Log.d(TAG, "Not found ");
+                                                inBlackList = false;
+                                            }
 
-                        }
-                        // allow calls only from numbers stored in list
-                        else if (!inList && common.getCallBlockingMode() == BlockingModes.ALLOW_ONLY_LIST_CALLS) {
-                            Log.i(TAG, "Number was not in list: " + incomingNumber);
+                                            // block calls from the numbers stored in list
+                                            if (inBlackList && common.getCallBlockingMode() == BlockingModes.BLOCK_LIST) {
+                                                Log.i(TAG, "Number was in list: " + incomingNumber);
+                                                ContentValues values = new ContentValues();
 
-                            Number number;
-                            if (isNumberPresentInContacts(context, incomingNumber)) {
-                                String name = getCallerID(context, incomingNumber);
-                                number = new Number(incomingNumber, name);
-                            } else {
-                                number = new Number(incomingNumber);
-                            }
+                                                Number number = Number.fromValues(values);
 
-                            rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_not_in_list));
-                            BlacklistObserver.notifyUpdated();
-                        }
-                        c.close();
-                    } finally {
-                        dbHelper.close();
+                                                rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_in_list));
+                                                BlacklistObserver.notifyUpdated();
+                                            }
+                                            // allow calls only from numbers stored in list
+                                            else if (!inBlackList && common.getCallBlockingMode() == BlockingModes.ALLOW_ONLY_LIST_CALLS) {
+                                                Log.i(TAG, "Number was not in list: " + incomingNumber);
+
+                                                Number number;
+                                                if (isNumberPresentInContacts(context, incomingNumber)) {
+                                                    String name = getCallerID(context, incomingNumber);
+                                                    number = new Number(incomingNumber, name);
+                                                } else {
+                                                    number = new Number(incomingNumber);
+                                                }
+
+                                                rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_not_in_list));
+                                                BlacklistObserver.notifyUpdated();
+                                            }
+
+
+                                        } else {
+                                            Log.w(TAG, "Error getting documents.", task.getException());
+                                        }
+                                    }
+                                });
+
+                    } catch (Exception ex) {
+
                     }
                 }
 

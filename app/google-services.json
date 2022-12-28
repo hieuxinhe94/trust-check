@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "302737435135",
+    "firebase_url": "https://trustcheck-6963c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "trustcheck-6963c",
+    "storage_bucket": "trustcheck-6963c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302737435135:android:551bfb209041a071b89fca",
+        "android_client_info": {
+          "package_name": "com.eastfield.trustcheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302737435135-0omo909oe375c9skbtocs8m7t19ohn4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvKjTnBi1dS9VgamfEf_LCndhfULH2RaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302737435135-0omo909oe375c9skbtocs8m7t19ohn4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

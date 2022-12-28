@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
@@ -10,7 +11,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.trustcheck"
+        applicationId "com.eastfield.trustcheck"
         minSdk 23
         targetSdk 33
         versionCode 1
@@ -81,5 +82,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:19.3.0'
     implementation 'com.github.Pfuster12:LiveChart:1.2.2'
 
-
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    // Declare the dependency for the Cloud Firestore library
+    implementation 'com.google.firebase:firebase-firestore'
 }

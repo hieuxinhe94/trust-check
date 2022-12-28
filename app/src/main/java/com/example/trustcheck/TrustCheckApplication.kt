@@ -5,7 +5,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
 import com.example.trustcheck.ui.utils.Constants
+import com.google.firebase.FirebaseApp
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import dagger.hilt.android.HiltAndroidApp
+
 
 @HiltAndroidApp
 class TrustCheckApplication : Application() {
@@ -19,6 +23,8 @@ class TrustCheckApplication : Application() {
         ctx = applicationContext
 
         initPref()
+        FirebaseApp.initializeApp(applicationContext)
+        syncDatabase();
     }
 
     private fun initPref() {
@@ -26,6 +32,18 @@ class TrustCheckApplication : Application() {
             Constants.SHARE_PREFERENCES,
             MODE_PRIVATE
         )!!
+    }
+
+    fun syncDatabase() {
+
+        val db = FirebaseFirestore.getInstance()
+
+
+        val settings = FirebaseFirestoreSettings.Builder()
+            .setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED)
+            .build()
+
+        db.firestoreSettings = settings
     }
 
     fun getPref(): SharedPreferences {
