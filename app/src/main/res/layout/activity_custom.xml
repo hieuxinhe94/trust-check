@@ -51,10 +51,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
             android:text="@string/received_news"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_lg"
-            android:fontFamily="@font/quicksand_semibold"
             android:textStyle="normal" />
 
         <TableLayout
@@ -107,7 +107,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/call_invite"
             android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_semibold"
+            android:fontFamily="sans-serif"
             android:textSize="@dimen/text_size_lg"
 
             app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +161,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/message_ads"
             android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_semibold"
+            android:fontFamily="sans-serif"
             android:textSize="@dimen/text_size_lg"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +217,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/scan_app_lbl"
             android:textColor="@color/black"
-            android:fontFamily="@font/quicksand_semibold"
+            android:fontFamily="sans-serif"
             android:textSize="@dimen/text_size_lg"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
@@ -276,7 +276,7 @@
             android:text="@string/upgrade"
             android:textColor="@color/main_color"
             android:textSize="@dimen/text_size_sm"
-            android:fontFamily="@font/quicksand_semibold"
+            android:fontFamily="sans-serif"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tab_warning" />
     </LinearLayout>

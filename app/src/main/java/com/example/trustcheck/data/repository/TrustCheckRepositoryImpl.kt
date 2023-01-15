@@ -1,5 +1,6 @@
 package com.example.trustcheck.data.repository
 
+import com.example.trustcheck.data.models.PhoneData
 import com.example.trustcheck.data.models.RecentWarning
 import com.example.trustcheck.data.models.Report
 import com.example.trustcheck.data.remote.ApiService
@@ -26,6 +27,12 @@ class TrustCheckRepositoryImpl @Inject constructor(
     override suspend fun getCurrentWarning(): Flow<DataState<List<RecentWarning>>> {
         return flow {
 
+        }
+    }
+
+    override suspend fun getPhoneData(phoneNumber: String): Flow<DataState<PhoneData>> {
+        return flow {
+            apiService.findPhone(phoneNumber)
         }
     }
 }

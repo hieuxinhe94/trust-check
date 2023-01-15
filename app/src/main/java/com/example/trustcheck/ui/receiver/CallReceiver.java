@@ -30,6 +30,9 @@ import com.android.internal.telephony.ITelephony;
 import com.example.trustcheck.R;
 import com.example.trustcheck.data.models.BlockingModes;
 import com.example.trustcheck.data.models.Number;
+import com.example.trustcheck.data.models.PhoneData;
+import com.example.trustcheck.data.models.Report;
+import com.example.trustcheck.services.ContactInfoService;
 import com.example.trustcheck.ui.Observer.BlacklistObserver;
 import com.example.trustcheck.ui.helper.DBHelper;
 import com.example.trustcheck.ui.utils.Common;
@@ -42,31 +45,36 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.lang.reflect.Method;
+import java.util.Calendar;
 
 
 public class CallReceiver extends BroadcastReceiver {
     private static final String TAG = "NoPhoneSpam";
-
     private static final int NOTIFY_REJECTED = 0;
     private static boolean AlreadyOnCall = false;
     private boolean inBlackList = false;
+    private static final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        String currentState = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
+        Log.i(TAG, "TelephonyManager currentState: " + currentState + " at time: " + Calendar.getInstance().getTime());
+
+        if (currentState.equals(TelephonyManager.CALL_STATE_RINGING)) {
+            Log.i(TAG, "CALL_STATE_RINGING 1: " + Calendar.getInstance().getTime());
+        }
 
         if (TelephonyManager.ACTION_PHONE_STATE_CHANGED.equals(intent.getAction()) &&
-                intent.getStringExtra(TelephonyManager.EXTRA_STATE).equals(TelephonyManager.EXTRA_STATE_RINGING)) {
+                currentState.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
+            Log.i(TAG, "EXTRA_STATE_RINGING 2: " + Calendar.getInstance().getTime());
+
             Common common = new Common();
 
             if (common.getCallBlockingMode() != BlockingModes.ALLOW_ALL) {
-
                 String incomingNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
-
                 if (incomingNumber == null)
                     return;
-
                 Log.i(TAG, "Received call: " + incomingNumber);
-
 
                 if (TextUtils.isEmpty(incomingNumber)) {
                     if (common.blockHiddenNumbers())
@@ -92,23 +100,27 @@ public class CallReceiver extends BroadcastReceiver {
                 } else {
 
                     try {
-                        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+                        Log.i(TAG, "CALL_STATE_RINGING Firebase start search: " + Calendar.getInstance().getTime());
                         db.collection("phoneData_VN").document(incomingNumber)
                                 .get()
                                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                     @Override
                                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                        Log.i(TAG, "CALL_STATE_RINGING Firebase onComplete search: " + Calendar.getInstance().getTime());
                                         if (task.isSuccessful()) {
                                             DocumentSnapshot document = task.getResult();
                                             if (document.exists()) {
                                                 Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                                                 inBlackList = true;
+
+                                                // Display info
+                                                displayCallerWarningInfo(currentState, context, incomingNumber, "SPAM");
                                             } else {
                                                 Log.d(TAG, "Not found ");
                                                 inBlackList = false;
                                             }
 
+                                            // TODO: un-comment rejectCall
                                             // block calls from the numbers stored in list
                                             if (inBlackList && common.getCallBlockingMode() == BlockingModes.BLOCK_LIST) {
                                                 Log.i(TAG, "Number was in list: " + incomingNumber);
@@ -116,7 +128,7 @@ public class CallReceiver extends BroadcastReceiver {
 
                                                 Number number = Number.fromValues(values);
 
-                                                rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_in_list));
+                                                //rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_in_list));
                                                 BlacklistObserver.notifyUpdated();
                                             }
                                             // allow calls only from numbers stored in list
@@ -131,7 +143,7 @@ public class CallReceiver extends BroadcastReceiver {
                                                     number = new Number(incomingNumber);
                                                 }
 
-                                                rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_not_in_list));
+                                                //rejectCall(context, number, context.getString(R.string.receiver_notify_number_was_not_in_list));
                                                 BlacklistObserver.notifyUpdated();
                                             }
 
@@ -251,5 +263,26 @@ public class CallReceiver extends BroadcastReceiver {
         }
         return name;
     }
+
+    private void displayCallerWarningInfo(String state, Context ctx,String callerNumber, String callerWarningLabel) {
+        Log.i(TAG, "TelephonyManager State: " + state);
+        Intent i;
+
+        //if(state.equals(String.valueOf(TelephonyManager.CALL_STATE_RINGING))) {
+            i = new Intent(ctx, ContactInfoService.class);
+            i.putExtra("callerLabel", callerWarningLabel);
+            i.putExtra("callerNumber", callerNumber);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                ctx.startForegroundService(i);
+            } else {
+                ctx.startService(i);
+            }
+//        } else {
+//           i = new Intent(ctx, ContactInfoService.class);
+//           ctx.stopService(i);
+//        }
+    }
+
 
 }

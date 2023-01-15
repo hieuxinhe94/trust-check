@@ -108,7 +108,7 @@
     <string name="warning_settings">"Scam app warning "</string>
     <string name="report_new_item">Report</string>
     <string name="slogan">Scam &amp; Spam Blocker</string>
-    <string name="search_hint">" Search phone number, message, name..."</string>
+    <string name="search_hint">" Search phone, name..."</string>
     <string name="attack_file">Attack images?</string>
     <string name="tip_hint">Tip:</string>
     <string name="pick_scam_category_lbl">Select one or mutiple options *</string>
@@ -122,5 +122,8 @@
     <string name="recent_report_lbl">Recent report</string>
     <string name="recent_active_lbl">Last actived</string>
     <string name="not_exactly_lbl">Not correct?</string>
-
+    <string name="title_activity_caller_info">CallerInfoActivity</string>
+    <string name="channel_name">trustcheck</string>
+    <string name="channel_description">trustcheck_desc</string>
+    <string name="call_logs">Call logs</string>
 </resources>

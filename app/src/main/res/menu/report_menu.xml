@@ -4,9 +4,20 @@
     android:tint="@color/main_color"
     >
     <item
-        android:id="@+id/id_complete"
-        android:title="@string/complete"
-        app:iconTint="@color/main_color"
-        app:itemTextColor="@color/main_color"
+        android:id="@+id/id_edit"
+        android:title="Edit"
+        android:icon="@drawable/ic_baseline_edit_note_24"
+        app:iconTint="@color/color_text_purple_1"
+        android:background="@drawable/border"
+        app:itemTextColor="@color/color_text_purple_1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/id_report_new"
+        android:title="New"
+        android:icon="@drawable/ic_warning"
+        app:iconTint="@color/color_text_orange_1"
+        android:background="@drawable/border"
+        app:itemTextColor="@color/color_text_purple_1"
         app:showAsAction="always" />
 </menu>

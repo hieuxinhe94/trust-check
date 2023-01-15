@@ -8,11 +8,14 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.provider.Telephony
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.view.*
 import android.view.inputmethod.InputMethodManager
@@ -55,6 +58,12 @@ class HomeActivity : AppCompatActivity() {
 
 
         clickAction()
+
+        if (!Settings.canDrawOverlays(this)) {
+            val intent =
+                Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName"))
+            startActivityForResult(intent, 0)
+        }
     }
 
     private fun initView() {
@@ -160,17 +169,33 @@ class HomeActivity : AppCompatActivity() {
         val w1 = RecentWarning("09676769696","Gọi điện lừa đảo")
         val w2 = RecentWarning("01234567892", "Lừa đảo mua bất động sản")
         val w3 = RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo");
+
         listWarning.add(w1)
         listWarning.add(w2)
         listWarning.add(w3)
-        warningAdapter = WarningAdapter(listWarning)
+
+        listWarning.add(RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo"))
+        listWarning.add(RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo"))
+        listWarning.add(RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo"))
+        listWarning.add(RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo"))
+        listWarning.add(RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo"))
+        listWarning.add(RecentWarning("FinNgay", "Ứng dụng vay nợ lừa đảo"))
+
+        warningAdapter = WarningAdapter(listWarning) { contact ->
+            var intent = Intent(this, ReportActivity::class.java)
+            startActivity(intent)
+            Log.i("TAG", contact);
+            null
+        }
+
         recyclerView?.addItemDecoration(
             DividerItemDecoration(
                 this,
                 LinearLayoutManager.VERTICAL
             )
         )
-        recyclerView?.adapter = warningAdapter
+        recyclerView?.adapter = warningAdapter;
+
     }
 
     private fun showDialog() {
@@ -212,7 +237,7 @@ class HomeActivity : AppCompatActivity() {
         requiredPermissions.add(Manifest.permission.CALL_PHONE)
         requiredPermissions.add(Manifest.permission.READ_PHONE_STATE)
         requiredPermissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        requiredPermissions.add(Manifest.permission.READ_CONTACTS)
+        //requiredPermissions.add(Manifest.permission.READ_CONTACTS)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             requiredPermissions.add(Manifest.permission.READ_CALL_LOG)
         }

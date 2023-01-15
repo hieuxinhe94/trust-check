@@ -26,7 +26,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="indicatiorInactive">#80C3F8</color>
     <color name="indicatioractive">#0581E5</color>
-    <color name="textSecondary">#BDBDBD</color>
+    <color name="textSecondary">#777575</color>
 
     <!-- colors for onboarding two-->
     <color name="activeIndicators">#39136d</color>
@@ -46,9 +46,10 @@
     <color name="text_color">#FF000000</color>
     <color name="text_shadow">#878695</color>
 
-    <color name="color_background_1">#2B0F51</color>
+    <color name="color_background_1">#E3D7FA</color>
+    <color name="color_purple_simple">#BF8B62D3</color>
     <color name="color_background_2">#EFF1FC</color>
     <color name="color_transparent">#00FFFFFF</color>
     <color name="color_text_purple_1">#2B0F51</color>
-    <color name="color_text_orange_1">#fc8019</color>
+    <color name="color_text_orange_1">#FDB852</color>
 </resources>
