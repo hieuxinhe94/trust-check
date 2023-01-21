@@ -1,6 +1,8 @@
 package com.example.trustcheck.di
 
 import com.example.trustcheck.data.remote.ApiService
+import com.example.trustcheck.data.repository.TrustCheckRepository
+import com.example.trustcheck.data.repository.TrustCheckRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,4 +41,9 @@ class NetworkApiModule {
         return retrofit.create(ApiService::class.java)
     }
 
+    @Singleton
+    @Provides
+    fun provideTrustRepository(apiService: ApiService): TrustCheckRepository {
+        return TrustCheckRepositoryImpl(apiService)
+    }
 }
