@@ -2,6 +2,7 @@ package com.example.trustcheck.ui.views.report
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,13 +21,18 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.yabu.livechart.model.DataPoint
 import com.yabu.livechart.model.Dataset
 import com.yabu.livechart.view.LiveChart
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 import retrofit2.Call
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
-
+@AndroidEntryPoint
 class ReportActivity : AppCompatActivity(), CoroutineScope {
     private var recyclerCommentsView: RecyclerView? = null
     private var warningAdapter: WarningAdapter? = null
@@ -34,7 +40,9 @@ class ReportActivity : AppCompatActivity(), CoroutineScope {
     private var topBackScreen: MaterialToolbar? = null
     private var adView: AdView? = null
     private var adRequest: AdRequest? = null
-    private var phoneDataRepository: TrustCheckRepository? = null
+
+    @Inject
+    lateinit var phoneDataRepository: TrustCheckRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,14 +51,10 @@ class ReportActivity : AppCompatActivity(), CoroutineScope {
         liveChart = findViewById(R.id.live_chart)
         topBackScreen = findViewById(R.id.top_back_screen)
         displayWarning()
-        launch {
-            val result =  phoneDataRepository?.getPhoneData("0967356524")
-            onResult("result.") // onResult is called on the main thread
-        }
+        getPhoneData()
         init()
         adView = findViewById(R.id.adView)
         initAdView()
-
     }
 
     private fun initAdView() {
@@ -59,11 +63,24 @@ class ReportActivity : AppCompatActivity(), CoroutineScope {
     }
 
     private suspend fun loadRemotePhoneProfile(phoneNumber: String) {
-        val repos  = phoneDataRepository?.getPhoneData(phoneNumber)
+        val repos = phoneDataRepository.getPhoneData(phoneNumber)
     }
 
-    private fun onResult(result: String) {
+    private fun getPhoneData() {
+        launch {
+            phoneDataRepository.getPhoneData("0962154915").flowOn(Dispatchers.IO)
+                .catch {
+                    // handle exception
+                    Log.d("ReportActivity", "get phone data exception: ${it.message}")
+                }
+                .collect {
+                    Log.d("ReportActivity", "get phone data collect: $it")
+                    onResult(it)
+                }
+        }
+    }
 
+    private fun onResult(phoneData: PhoneData) {
 
     }
 
